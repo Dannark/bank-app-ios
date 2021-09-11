@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		65B530A826E7E905002B73A4 /* CreditcardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B530A726E7E905002B73A4 /* CreditcardViewController.swift */; };
+		65B530AA26E7ECA8002B73A4 /* CardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B530A926E7ECA8002B73A4 /* CardItem.swift */; };
 		65BBF0C126E6E21900C9F598 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BBF0C026E6E21900C9F598 /* AppDelegate.swift */; };
 		65BBF0C326E6E21900C9F598 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BBF0C226E6E21900C9F598 /* SceneDelegate.swift */; };
 		65BBF0C526E6E21900C9F598 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BBF0C426E6E21900C9F598 /* ViewController.swift */; };
@@ -15,6 +17,8 @@
 		65BBF0CD26E6E21A00C9F598 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65BBF0CB26E6E21A00C9F598 /* LaunchScreen.storyboard */; };
 		65BBF0D826E6E21B00C9F598 /* Lorem_IpsumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BBF0D726E6E21B00C9F598 /* Lorem_IpsumTests.swift */; };
 		65BBF0E326E6E21B00C9F598 /* Lorem_IpsumUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BBF0E226E6E21B00C9F598 /* Lorem_IpsumUITests.swift */; };
+		65BBF0F126E7097A00C9F598 /* HelperExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BBF0F026E7097A00C9F598 /* HelperExtensions.swift */; };
+		65CDB1A926E70C93008798C9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CDB1A826E70C93008798C9 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		65BBF0BD26E6E21900C9F598 /* Lorem Ipsum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lorem Ipsum.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		65B530A726E7E905002B73A4 /* CreditcardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditcardViewController.swift; sourceTree = "<group>"; };
+		65B530A926E7ECA8002B73A4 /* CardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardItem.swift; sourceTree = "<group>"; };
+		65BBF0BD26E6E21900C9F598 /* Lorem Bank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lorem Bank.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		65BBF0C026E6E21900C9F598 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65BBF0C226E6E21900C9F598 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		65BBF0C426E6E21900C9F598 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -43,12 +49,14 @@
 		65BBF0C926E6E21A00C9F598 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		65BBF0CC26E6E21A00C9F598 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		65BBF0CE26E6E21A00C9F598 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		65BBF0D326E6E21B00C9F598 /* Lorem IpsumTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Lorem IpsumTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		65BBF0D326E6E21B00C9F598 /* Lorem BankTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Lorem BankTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		65BBF0D726E6E21B00C9F598 /* Lorem_IpsumTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lorem_IpsumTests.swift; sourceTree = "<group>"; };
 		65BBF0D926E6E21B00C9F598 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		65BBF0DE26E6E21B00C9F598 /* Lorem IpsumUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Lorem IpsumUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		65BBF0DE26E6E21B00C9F598 /* Lorem BankUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Lorem BankUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		65BBF0E226E6E21B00C9F598 /* Lorem_IpsumUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lorem_IpsumUITests.swift; sourceTree = "<group>"; };
 		65BBF0E426E6E21B00C9F598 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65BBF0F026E7097A00C9F598 /* HelperExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperExtensions.swift; sourceTree = "<group>"; };
+		65CDB1A826E70C93008798C9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +84,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		65B530A426E7E5D2002B73A4 /* home */ = {
+			isa = PBXGroup;
+			children = (
+				65B530A626E7E882002B73A4 /* controllers */,
+				65B530A526E7E875002B73A4 /* models */,
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
+		65B530A526E7E875002B73A4 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				65B530A926E7ECA8002B73A4 /* CardItem.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		65B530A626E7E882002B73A4 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				65B530A726E7E905002B73A4 /* CreditcardViewController.swift */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
 		65BBF0B426E6E21900C9F598 = {
 			isa = PBXGroup;
 			children = (
@@ -89,9 +122,9 @@
 		65BBF0BE26E6E21900C9F598 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				65BBF0BD26E6E21900C9F598 /* Lorem Ipsum.app */,
-				65BBF0D326E6E21B00C9F598 /* Lorem IpsumTests.xctest */,
-				65BBF0DE26E6E21B00C9F598 /* Lorem IpsumUITests.xctest */,
+				65BBF0BD26E6E21900C9F598 /* Lorem Bank.app */,
+				65BBF0D326E6E21B00C9F598 /* Lorem BankTests.xctest */,
+				65BBF0DE26E6E21B00C9F598 /* Lorem BankUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,6 +132,7 @@
 		65BBF0BF26E6E21900C9F598 /* Lorem Ipsum */ = {
 			isa = PBXGroup;
 			children = (
+				65B530A426E7E5D2002B73A4 /* home */,
 				65BBF0C026E6E21900C9F598 /* AppDelegate.swift */,
 				65BBF0C226E6E21900C9F598 /* SceneDelegate.swift */,
 				65BBF0C426E6E21900C9F598 /* ViewController.swift */,
@@ -106,6 +140,8 @@
 				65BBF0C926E6E21A00C9F598 /* Assets.xcassets */,
 				65BBF0CB26E6E21A00C9F598 /* LaunchScreen.storyboard */,
 				65BBF0CE26E6E21A00C9F598 /* Info.plist */,
+				65BBF0F026E7097A00C9F598 /* HelperExtensions.swift */,
+				65CDB1A826E70C93008798C9 /* HomeViewController.swift */,
 			);
 			path = "Lorem Ipsum";
 			sourceTree = "<group>";
@@ -131,9 +167,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		65BBF0BC26E6E21900C9F598 /* Lorem Ipsum */ = {
+		65BBF0BC26E6E21900C9F598 /* Lorem Bank */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 65BBF0E726E6E21B00C9F598 /* Build configuration list for PBXNativeTarget "Lorem Ipsum" */;
+			buildConfigurationList = 65BBF0E726E6E21B00C9F598 /* Build configuration list for PBXNativeTarget "Lorem Bank" */;
 			buildPhases = (
 				65BBF0B926E6E21900C9F598 /* Sources */,
 				65BBF0BA26E6E21900C9F598 /* Frameworks */,
@@ -143,14 +179,14 @@
 			);
 			dependencies = (
 			);
-			name = "Lorem Ipsum";
+			name = "Lorem Bank";
 			productName = "Lorem Ipsum";
-			productReference = 65BBF0BD26E6E21900C9F598 /* Lorem Ipsum.app */;
+			productReference = 65BBF0BD26E6E21900C9F598 /* Lorem Bank.app */;
 			productType = "com.apple.product-type.application";
 		};
-		65BBF0D226E6E21B00C9F598 /* Lorem IpsumTests */ = {
+		65BBF0D226E6E21B00C9F598 /* Lorem BankTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 65BBF0EA26E6E21B00C9F598 /* Build configuration list for PBXNativeTarget "Lorem IpsumTests" */;
+			buildConfigurationList = 65BBF0EA26E6E21B00C9F598 /* Build configuration list for PBXNativeTarget "Lorem BankTests" */;
 			buildPhases = (
 				65BBF0CF26E6E21B00C9F598 /* Sources */,
 				65BBF0D026E6E21B00C9F598 /* Frameworks */,
@@ -161,14 +197,14 @@
 			dependencies = (
 				65BBF0D526E6E21B00C9F598 /* PBXTargetDependency */,
 			);
-			name = "Lorem IpsumTests";
+			name = "Lorem BankTests";
 			productName = "Lorem IpsumTests";
-			productReference = 65BBF0D326E6E21B00C9F598 /* Lorem IpsumTests.xctest */;
+			productReference = 65BBF0D326E6E21B00C9F598 /* Lorem BankTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		65BBF0DD26E6E21B00C9F598 /* Lorem IpsumUITests */ = {
+		65BBF0DD26E6E21B00C9F598 /* Lorem BankUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 65BBF0ED26E6E21B00C9F598 /* Build configuration list for PBXNativeTarget "Lorem IpsumUITests" */;
+			buildConfigurationList = 65BBF0ED26E6E21B00C9F598 /* Build configuration list for PBXNativeTarget "Lorem BankUITests" */;
 			buildPhases = (
 				65BBF0DA26E6E21B00C9F598 /* Sources */,
 				65BBF0DB26E6E21B00C9F598 /* Frameworks */,
@@ -179,9 +215,9 @@
 			dependencies = (
 				65BBF0E026E6E21B00C9F598 /* PBXTargetDependency */,
 			);
-			name = "Lorem IpsumUITests";
+			name = "Lorem BankUITests";
 			productName = "Lorem IpsumUITests";
-			productReference = 65BBF0DE26E6E21B00C9F598 /* Lorem IpsumUITests.xctest */;
+			productReference = 65BBF0DE26E6E21B00C9F598 /* Lorem BankUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -206,7 +242,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 65BBF0B826E6E21900C9F598 /* Build configuration list for PBXProject "Lorem Ipsum" */;
+			buildConfigurationList = 65BBF0B826E6E21900C9F598 /* Build configuration list for PBXProject "Lorem Bank" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -219,9 +255,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				65BBF0BC26E6E21900C9F598 /* Lorem Ipsum */,
-				65BBF0D226E6E21B00C9F598 /* Lorem IpsumTests */,
-				65BBF0DD26E6E21B00C9F598 /* Lorem IpsumUITests */,
+				65BBF0BC26E6E21900C9F598 /* Lorem Bank */,
+				65BBF0D226E6E21B00C9F598 /* Lorem BankTests */,
+				65BBF0DD26E6E21B00C9F598 /* Lorem BankUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -258,7 +294,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65B530A826E7E905002B73A4 /* CreditcardViewController.swift in Sources */,
+				65CDB1A926E70C93008798C9 /* HomeViewController.swift in Sources */,
+				65B530AA26E7ECA8002B73A4 /* CardItem.swift in Sources */,
 				65BBF0C526E6E21900C9F598 /* ViewController.swift in Sources */,
+				65BBF0F126E7097A00C9F598 /* HelperExtensions.swift in Sources */,
 				65BBF0C126E6E21900C9F598 /* AppDelegate.swift in Sources */,
 				65BBF0C326E6E21900C9F598 /* SceneDelegate.swift in Sources */,
 			);
@@ -285,12 +325,12 @@
 /* Begin PBXTargetDependency section */
 		65BBF0D526E6E21B00C9F598 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 65BBF0BC26E6E21900C9F598 /* Lorem Ipsum */;
+			target = 65BBF0BC26E6E21900C9F598 /* Lorem Bank */;
 			targetProxy = 65BBF0D426E6E21B00C9F598 /* PBXContainerItemProxy */;
 		};
 		65BBF0E026E6E21B00C9F598 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 65BBF0BC26E6E21900C9F598 /* Lorem Ipsum */;
+			target = 65BBF0BC26E6E21900C9F598 /* Lorem Bank */;
 			targetProxy = 65BBF0DF26E6E21B00C9F598 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -442,7 +482,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dannark.loremipsumbank.Lorem-Ipsum";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dannark.Lorem-Ipsum";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -460,7 +500,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dannark.loremipsumbank.Lorem-Ipsum";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dannark.Lorem-Ipsum";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -484,7 +524,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lorem Ipsum.app/Lorem Ipsum";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lorem Bank.app/Lorem Bank";
 			};
 			name = Debug;
 		};
@@ -505,7 +545,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lorem Ipsum.app/Lorem Ipsum";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lorem Bank.app/Lorem Bank";
 			};
 			name = Release;
 		};
@@ -550,7 +590,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		65BBF0B826E6E21900C9F598 /* Build configuration list for PBXProject "Lorem Ipsum" */ = {
+		65BBF0B826E6E21900C9F598 /* Build configuration list for PBXProject "Lorem Bank" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				65BBF0E526E6E21B00C9F598 /* Debug */,
@@ -559,7 +599,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		65BBF0E726E6E21B00C9F598 /* Build configuration list for PBXNativeTarget "Lorem Ipsum" */ = {
+		65BBF0E726E6E21B00C9F598 /* Build configuration list for PBXNativeTarget "Lorem Bank" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				65BBF0E826E6E21B00C9F598 /* Debug */,
@@ -568,7 +608,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		65BBF0EA26E6E21B00C9F598 /* Build configuration list for PBXNativeTarget "Lorem IpsumTests" */ = {
+		65BBF0EA26E6E21B00C9F598 /* Build configuration list for PBXNativeTarget "Lorem BankTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				65BBF0EB26E6E21B00C9F598 /* Debug */,
@@ -577,7 +617,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		65BBF0ED26E6E21B00C9F598 /* Build configuration list for PBXNativeTarget "Lorem IpsumUITests" */ = {
+		65BBF0ED26E6E21B00C9F598 /* Build configuration list for PBXNativeTarget "Lorem BankUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				65BBF0EE26E6E21B00C9F598 /* Debug */,
