@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6502D96426EE909B001376AC /* InputDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6502D96326EE909B001376AC /* InputDetailModel.swift */; };
 		65345A8A26ED5688001ABDC3 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65345A8926ED5688001ABDC3 /* HomeTableViewController.swift */; };
+		655FBF7B26ED6716006AA5DC /* Pix.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 655FBF7A26ED6716006AA5DC /* Pix.storyboard */; };
+		659A9DEB26EE686D00E102ED /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659A9DEA26EE686D00E102ED /* InputViewController.swift */; };
+		659A9DEE26EE691400E102ED /* PixSendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659A9DED26EE691400E102ED /* PixSendViewController.swift */; };
 		65B530A826E7E905002B73A4 /* CreditcardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B530A726E7E905002B73A4 /* CreditcardViewController.swift */; };
 		65B530AA26E7ECA8002B73A4 /* CardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B530A926E7ECA8002B73A4 /* CardItem.swift */; };
 		65BBF0C126E6E21900C9F598 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BBF0C026E6E21900C9F598 /* AppDelegate.swift */; };
@@ -40,7 +44,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6502D96326EE909B001376AC /* InputDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputDetailModel.swift; sourceTree = "<group>"; };
 		65345A8926ED5688001ABDC3 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
+		655FBF7A26ED6716006AA5DC /* Pix.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Pix.storyboard; sourceTree = "<group>"; };
+		659A9DEA26EE686D00E102ED /* InputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
+		659A9DED26EE691400E102ED /* PixSendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixSendViewController.swift; sourceTree = "<group>"; };
 		65B530A726E7E905002B73A4 /* CreditcardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditcardViewController.swift; sourceTree = "<group>"; };
 		65B530A926E7ECA8002B73A4 /* CardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardItem.swift; sourceTree = "<group>"; };
 		65BBF0BD26E6E21900C9F598 /* Lorem Bank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lorem Bank.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,6 +94,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6502D96226EE9033001376AC /* model */ = {
+			isa = PBXGroup;
+			children = (
+				6502D96326EE909B001376AC /* InputDetailModel.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		6502D96526EEAE20001376AC /* util */ = {
+			isa = PBXGroup;
+			children = (
+				65BBF0F026E7097A00C9F598 /* HelperExtensions.swift */,
+			);
+			path = util;
+			sourceTree = "<group>";
+		};
+		655FBF7826ED65A1006AA5DC /* pix */ = {
+			isa = PBXGroup;
+			children = (
+				6502D96226EE9033001376AC /* model */,
+				659A9DE926EE684F00E102ED /* controller */,
+				655FBF7926ED6600006AA5DC /* view */,
+			);
+			path = pix;
+			sourceTree = "<group>";
+		};
+		655FBF7926ED6600006AA5DC /* view */ = {
+			isa = PBXGroup;
+			children = (
+				655FBF7A26ED6716006AA5DC /* Pix.storyboard */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		659A9DE926EE684F00E102ED /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				659A9DEA26EE686D00E102ED /* InputViewController.swift */,
+				659A9DED26EE691400E102ED /* PixSendViewController.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
 		65B530A426E7E5D2002B73A4 /* home */ = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +186,8 @@
 		65BBF0BF26E6E21900C9F598 /* Lorem Ipsum */ = {
 			isa = PBXGroup;
 			children = (
+				6502D96526EEAE20001376AC /* util */,
+				655FBF7826ED65A1006AA5DC /* pix */,
 				65B530A426E7E5D2002B73A4 /* home */,
 				65BBF0C026E6E21900C9F598 /* AppDelegate.swift */,
 				65BBF0C226E6E21900C9F598 /* SceneDelegate.swift */,
@@ -143,7 +196,6 @@
 				65BBF0C926E6E21A00C9F598 /* Assets.xcassets */,
 				65BBF0CB26E6E21A00C9F598 /* LaunchScreen.storyboard */,
 				65BBF0CE26E6E21A00C9F598 /* Info.plist */,
-				65BBF0F026E7097A00C9F598 /* HelperExtensions.swift */,
 				65CDB1A826E70C93008798C9 /* HomeViewController.swift */,
 			);
 			path = "Lorem Ipsum";
@@ -272,6 +324,7 @@
 			files = (
 				65BBF0CD26E6E21A00C9F598 /* LaunchScreen.storyboard in Resources */,
 				65BBF0CA26E6E21A00C9F598 /* Assets.xcassets in Resources */,
+				655FBF7B26ED6716006AA5DC /* Pix.storyboard in Resources */,
 				65BBF0C826E6E21900C9F598 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,13 +350,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6502D96426EE909B001376AC /* InputDetailModel.swift in Sources */,
 				65345A8A26ED5688001ABDC3 /* HomeTableViewController.swift in Sources */,
 				65B530A826E7E905002B73A4 /* CreditcardViewController.swift in Sources */,
+				659A9DEE26EE691400E102ED /* PixSendViewController.swift in Sources */,
 				65CDB1A926E70C93008798C9 /* HomeViewController.swift in Sources */,
 				65B530AA26E7ECA8002B73A4 /* CardItem.swift in Sources */,
 				65BBF0C526E6E21900C9F598 /* ViewController.swift in Sources */,
 				65BBF0F126E7097A00C9F598 /* HelperExtensions.swift in Sources */,
 				65BBF0C126E6E21900C9F598 /* AppDelegate.swift in Sources */,
+				659A9DEB26EE686D00E102ED /* InputViewController.swift in Sources */,
 				65BBF0C326E6E21900C9F598 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

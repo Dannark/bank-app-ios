@@ -9,6 +9,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Pix-->
+        <scene sceneID="6LG-t7-Sqw">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Pix" id="kUL-Lc-tL9" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="tPd-7u-mVi"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zst-u4-NuC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="92" y="-29"/>
+        </scene>
         <!--Home-->
         <scene sceneID="B48-EU-Anf">
             <objects>
@@ -28,7 +38,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carteira" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xsa-re-FTu">
-                                                    <rect key="frame" x="20" y="11" width="77" height="24"/>
+                                                    <rect key="frame" x="20" y="11" width="76.5" height="24"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -138,6 +148,7 @@
                                                                     </userDefinedRuntimeAttributes>
                                                                     <connections>
                                                                         <action selector="onTransferPixTouch:" destination="Bju-jD-HF2" eventType="touchUpInside" id="MiE-rW-14a"/>
+                                                                        <segue destination="kUL-Lc-tL9" kind="show" id="JM0-RC-gMk"/>
                                                                     </connections>
                                                                 </button>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transferir" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nOv-Zg-Wzl">
@@ -418,52 +429,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KAl-yX-xCt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2075.36231884058" y="505.58035714285711"/>
-        </scene>
-        <!--Cartões-->
-        <scene sceneID="tLm-Pj-tSJ">
-            <objects>
-                <viewController id="VuU-vm-Uco" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="aUy-H8-kSS">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="ALx-6s-Y1i"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Cartões" image="creditcard" catalog="system" id="PDh-Dv-aX1"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yli-KP-Sw5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1433" y="506"/>
-        </scene>
-        <!--Investmento-->
-        <scene sceneID="FQP-PI-XB2">
-            <objects>
-                <tableViewController id="GYN-a0-Sot" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Kfi-oh-ovo">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Juv-SW-7hj">
-                                <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Juv-SW-7hj" id="LoD-Lw-h0y">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="GYN-a0-Sot" id="DOc-xw-XLE"/>
-                            <outlet property="delegate" destination="GYN-a0-Sot" id="d4k-nA-2RT"/>
-                        </connections>
-                    </tableView>
-                    <tabBarItem key="tabBarItem" title="Investmento" image="dollarsign.circle" catalog="system" id="5Fz-iM-gfv"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LNd-YK-KMV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-786" y="506"/>
+            <point key="canvasLocation" x="-416" y="-224"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="NEU-xh-PYS">
@@ -475,8 +441,6 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="VuU-vm-Uco" kind="relationship" relationship="viewControllers" id="hMU-Xr-RMl"/>
-                        <segue destination="GYN-a0-Sot" kind="relationship" relationship="viewControllers" id="F0G-zB-vIU"/>
                         <segue destination="Bju-jD-HF2" kind="relationship" relationship="viewControllers" id="lTc-Hm-Ujn"/>
                     </connections>
                 </tabBarController>
@@ -593,13 +557,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E1m-sB-Elf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2074" y="1014"/>
+            <point key="canvasLocation" x="354" y="-240"/>
         </scene>
     </scenes>
     <resources>
         <image name="arrow.2.squarepath" catalog="system" width="128" height="89"/>
-        <image name="creditcard" catalog="system" width="128" height="88"/>
-        <image name="dollarsign.circle" catalog="system" width="128" height="121"/>
         <image name="eye.slash" catalog="system" width="128" height="86"/>
         <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="master_card_icon" width="128" height="64"/>

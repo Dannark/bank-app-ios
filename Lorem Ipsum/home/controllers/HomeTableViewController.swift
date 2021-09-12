@@ -18,17 +18,17 @@ class HomeTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        current.text = "1250,00"
+        current.text = "******"
         accumulated.text = "9,89"
         
-        invoice.text = "100,00"
+        invoice.text = "******"
         invoiceDueDate.text = "01/05"
     }
     @IBAction func onEyeCurrentTouch(_ sender: Any) {
-        current.text = "******"
+        current.text = "1250,00"
     }
     @IBAction func onEyeInvoiceTouch(_ sender: Any) {
-        invoice.text = "******"
+        invoice.text = "100,00"
     }
     @IBAction func onTransferPixTouch(_ sender: Any) {
     }
@@ -37,6 +37,7 @@ class HomeTableViewController: UITableViewController {
     @IBAction func onLimitePixTouch(_ sender: Any) {
     }
     @IBAction func onQRCodePixTouch(_ sender: Any) {
+        toast(message: "Pagamento QRCode ainda não está disponível.")
     }
     @IBAction func payInvoice(_ sender: Any) {
     }
@@ -64,6 +65,10 @@ class HomeTableViewController: UITableViewController {
             if UIApplication.shared.canOpenURL(emailURL as URL) {
                 UIApplication.shared.openURL(emailURL as URL)
             }
+            else{
+                toast(message: "Use um dispositivo real para está funcionalidade")
+            }
         }
+        
     }
 }
