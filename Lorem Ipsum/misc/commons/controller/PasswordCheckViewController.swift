@@ -70,7 +70,7 @@ class PasswordCheckViewController: UIViewController, UITextFieldDelegate {
     private func validatePassword(amount: Int, password: String){
         passwordCheck.textColor = UIColor.black
         if amount >= passwordLength{
-            let isCorrect = (password == "1234")
+            let isCorrect = (password == AuthenticationAPIManager.shared.credentials.prekey)
             
             if(!isCorrect){
                 passwordCheck.textColor = UIColor.red

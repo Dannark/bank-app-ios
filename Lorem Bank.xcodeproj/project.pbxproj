@@ -15,6 +15,17 @@
 		65920C8126F01C7E0027D6DF /* PasswordCheck.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65920C8026F01C7E0027D6DF /* PasswordCheck.storyboard */; };
 		65920C8426F024B00027D6DF /* InputModal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65920C8326F024B00027D6DF /* InputModal.storyboard */; };
 		65920C8726F0282F0027D6DF /* PixConfirmedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65920C8626F0282F0027D6DF /* PixConfirmedViewController.swift */; };
+		65920C8926F039EA0027D6DF /* LimitPix.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65920C8826F039EA0027D6DF /* LimitPix.storyboard */; };
+		65920C8B26F03EE20027D6DF /* PixLimitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65920C8A26F03EE20027D6DF /* PixLimitViewController.swift */; };
+		65920C9126F049AF0027D6DF /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65920C9026F049AF0027D6DF /* Login.storyboard */; };
+		65989F3726F0C8FB00FB93E6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65989F3626F0C8FB00FB93E6 /* LoginViewController.swift */; };
+		65989F3A26F0CD1E00FB93E6 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65989F3926F0CD1E00FB93E6 /* CoreDataManager.swift */; };
+		65989F3E26F0CECB00FB93E6 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65989F3D26F0CECB00FB93E6 /* APIManager.swift */; };
+		65989F4026F0D9B700FB93E6 /* AuthenticationAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65989F3F26F0D9B700FB93E6 /* AuthenticationAPIManager.swift */; };
+		65989F4326F0E18C00FB93E6 /* AuthenticationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65989F4226F0E18C00FB93E6 /* AuthenticationModel.swift */; };
+		65989F4526F1071D00FB93E6 /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65989F4426F1071D00FB93E6 /* AccountModel.swift */; };
+		65989F4826F13DC100FB93E6 /* InvoiceItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65989F4726F13DC100FB93E6 /* InvoiceItem.swift */; };
+		65989F4A26F1452200FB93E6 /* PixLimitConfirmedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65989F4926F1452200FB93E6 /* PixLimitConfirmedViewController.swift */; };
 		659A9DEB26EE686D00E102ED /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659A9DEA26EE686D00E102ED /* InputViewController.swift */; };
 		659A9DEE26EE691400E102ED /* PixSendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659A9DED26EE691400E102ED /* PixSendViewController.swift */; };
 		65B1814526EFC6B700197AFC /* PixPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B1814426EFC6B700197AFC /* PixPreviewViewController.swift */; };
@@ -59,6 +70,17 @@
 		65920C8026F01C7E0027D6DF /* PasswordCheck.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PasswordCheck.storyboard; sourceTree = "<group>"; };
 		65920C8326F024B00027D6DF /* InputModal.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InputModal.storyboard; sourceTree = "<group>"; };
 		65920C8626F0282F0027D6DF /* PixConfirmedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixConfirmedViewController.swift; sourceTree = "<group>"; };
+		65920C8826F039EA0027D6DF /* LimitPix.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LimitPix.storyboard; sourceTree = "<group>"; };
+		65920C8A26F03EE20027D6DF /* PixLimitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixLimitViewController.swift; sourceTree = "<group>"; };
+		65920C9026F049AF0027D6DF /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		65989F3626F0C8FB00FB93E6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		65989F3926F0CD1E00FB93E6 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		65989F3D26F0CECB00FB93E6 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		65989F3F26F0D9B700FB93E6 /* AuthenticationAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationAPIManager.swift; sourceTree = "<group>"; };
+		65989F4226F0E18C00FB93E6 /* AuthenticationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationModel.swift; sourceTree = "<group>"; };
+		65989F4426F1071D00FB93E6 /* AccountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModel.swift; sourceTree = "<group>"; };
+		65989F4726F13DC100FB93E6 /* InvoiceItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceItem.swift; sourceTree = "<group>"; };
+		65989F4926F1452200FB93E6 /* PixLimitConfirmedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixLimitConfirmedViewController.swift; sourceTree = "<group>"; };
 		659A9DEA26EE686D00E102ED /* InputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
 		659A9DED26EE691400E102ED /* PixSendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixSendViewController.swift; sourceTree = "<group>"; };
 		65B1814426EFC6B700197AFC /* PixPreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixPreviewViewController.swift; sourceTree = "<group>"; };
@@ -140,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				655FBF7A26ED6716006AA5DC /* Pix.storyboard */,
+				65920C8826F039EA0027D6DF /* LimitPix.storyboard */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -147,8 +170,10 @@
 		65920C7F26F01C5B0027D6DF /* misc */ = {
 			isa = PBXGroup;
 			children = (
-				65920C8526F0252C0027D6DF /* controller */,
-				65920C8226F024890027D6DF /* view */,
+				65989F3C26F0CE4E00FB93E6 /* commons */,
+				65989F3B26F0CDC800FB93E6 /* core data */,
+				65989F3D26F0CECB00FB93E6 /* APIManager.swift */,
+				65989F3F26F0D9B700FB93E6 /* AuthenticationAPIManager.swift */,
 			);
 			path = misc;
 			sourceTree = "<group>";
@@ -171,12 +196,66 @@
 			path = controller;
 			sourceTree = "<group>";
 		};
+		65920C8C26F048AC0027D6DF /* login */ = {
+			isa = PBXGroup;
+			children = (
+				65989F4126F0D9E500FB93E6 /* models */,
+				65989F3526F0C87200FB93E6 /* controller */,
+				65920C8F26F049A30027D6DF /* view */,
+			);
+			path = login;
+			sourceTree = "<group>";
+		};
+		65920C8F26F049A30027D6DF /* view */ = {
+			isa = PBXGroup;
+			children = (
+				65920C9026F049AF0027D6DF /* Login.storyboard */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		65989F3526F0C87200FB93E6 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				65989F3626F0C8FB00FB93E6 /* LoginViewController.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		65989F3B26F0CDC800FB93E6 /* core data */ = {
+			isa = PBXGroup;
+			children = (
+				65989F3926F0CD1E00FB93E6 /* CoreDataManager.swift */,
+			);
+			path = "core data";
+			sourceTree = "<group>";
+		};
+		65989F3C26F0CE4E00FB93E6 /* commons */ = {
+			isa = PBXGroup;
+			children = (
+				65920C8526F0252C0027D6DF /* controller */,
+				65920C8226F024890027D6DF /* view */,
+			);
+			path = commons;
+			sourceTree = "<group>";
+		};
+		65989F4126F0D9E500FB93E6 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				65989F4226F0E18C00FB93E6 /* AuthenticationModel.swift */,
+				65989F4426F1071D00FB93E6 /* AccountModel.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
 		659A9DE926EE684F00E102ED /* controller */ = {
 			isa = PBXGroup;
 			children = (
 				659A9DED26EE691400E102ED /* PixSendViewController.swift */,
 				65B1814426EFC6B700197AFC /* PixPreviewViewController.swift */,
 				65920C8626F0282F0027D6DF /* PixConfirmedViewController.swift */,
+				65920C8A26F03EE20027D6DF /* PixLimitViewController.swift */,
+				65989F4926F1452200FB93E6 /* PixLimitConfirmedViewController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -194,6 +273,7 @@
 			isa = PBXGroup;
 			children = (
 				65B530A926E7ECA8002B73A4 /* CardItem.swift */,
+				65989F4726F13DC100FB93E6 /* InvoiceItem.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -230,6 +310,7 @@
 		65BBF0BF26E6E21900C9F598 /* Lorem Ipsum */ = {
 			isa = PBXGroup;
 			children = (
+				65920C8C26F048AC0027D6DF /* login */,
 				65920C7F26F01C5B0027D6DF /* misc */,
 				6502D96526EEAE20001376AC /* util */,
 				655FBF7826ED65A1006AA5DC /* pix */,
@@ -367,7 +448,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65920C9126F049AF0027D6DF /* Login.storyboard in Resources */,
 				65BBF0CD26E6E21A00C9F598 /* LaunchScreen.storyboard in Resources */,
+				65920C8926F039EA0027D6DF /* LimitPix.storyboard in Resources */,
 				65920C8426F024B00027D6DF /* InputModal.storyboard in Resources */,
 				65BBF0CA26E6E21A00C9F598 /* Assets.xcassets in Resources */,
 				655FBF7B26ED6716006AA5DC /* Pix.storyboard in Resources */,
@@ -397,20 +480,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65989F3726F0C8FB00FB93E6 /* LoginViewController.swift in Sources */,
 				6502D96426EE909B001376AC /* InputDetailModel.swift in Sources */,
 				65345A8A26ED5688001ABDC3 /* HomeTableViewController.swift in Sources */,
+				65989F4326F0E18C00FB93E6 /* AuthenticationModel.swift in Sources */,
+				65989F3A26F0CD1E00FB93E6 /* CoreDataManager.swift in Sources */,
 				65920C7E26F0032E0027D6DF /* PasswordCheckViewController.swift in Sources */,
 				65B530A826E7E905002B73A4 /* CreditcardViewController.swift in Sources */,
 				65920C8726F0282F0027D6DF /* PixConfirmedViewController.swift in Sources */,
 				659A9DEE26EE691400E102ED /* PixSendViewController.swift in Sources */,
+				65989F4A26F1452200FB93E6 /* PixLimitConfirmedViewController.swift in Sources */,
 				65CDB1A926E70C93008798C9 /* HomeViewController.swift in Sources */,
+				65989F4526F1071D00FB93E6 /* AccountModel.swift in Sources */,
 				65B530AA26E7ECA8002B73A4 /* CardItem.swift in Sources */,
 				65BBF0C526E6E21900C9F598 /* ViewController.swift in Sources */,
+				65989F4826F13DC100FB93E6 /* InvoiceItem.swift in Sources */,
+				65920C8B26F03EE20027D6DF /* PixLimitViewController.swift in Sources */,
+				65989F3E26F0CECB00FB93E6 /* APIManager.swift in Sources */,
 				65B1814726EFCCF800197AFC /* Utils.swift in Sources */,
 				65920C7C26EFF7FE0027D6DF /* String+Extensions.swift in Sources */,
 				65BBF0F126E7097A00C9F598 /* HelperExtensions.swift in Sources */,
 				65BBF0C126E6E21900C9F598 /* AppDelegate.swift in Sources */,
 				659A9DEB26EE686D00E102ED /* InputViewController.swift in Sources */,
+				65989F4026F0D9B700FB93E6 /* AuthenticationAPIManager.swift in Sources */,
 				65BBF0C326E6E21900C9F598 /* SceneDelegate.swift in Sources */,
 				65B1814526EFC6B700197AFC /* PixPreviewViewController.swift in Sources */,
 			);

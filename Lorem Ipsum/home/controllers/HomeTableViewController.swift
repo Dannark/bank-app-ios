@@ -17,18 +17,25 @@ class HomeTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        clearAllPreviousNavigation()
+        initializeFields()
+        
+    }
+    
+    private func initializeFields(){
         current.text = "******"
-        accumulated.text = "9,89"
+        accumulated.text = AuthenticationAPIManager.shared.credentials.account?.monthAccumulated?.toPrice()
         
         invoice.text = "******"
-        invoiceDueDate.text = "01/05"
+        invoiceDueDate.text = AuthenticationAPIManager.shared.credentials.invoice?.dueDate
     }
+    
     @IBAction func onEyeCurrentTouch(_ sender: Any) {
-        current.text = "1250,00"
+        current.text = AuthenticationAPIManager.shared.credentials.account?.balance?.toPrice()
     }
     @IBAction func onEyeInvoiceTouch(_ sender: Any) {
-        invoice.text = "100,00"
+        invoice.text = AuthenticationAPIManager.shared.credentials.invoice?.value.toPrice()
     }
     @IBAction func onTransferPixTouch(_ sender: Any) {
     }
@@ -71,5 +78,14 @@ class HomeTableViewController: UITableViewController {
             }
         }
         
+    }
+    
+    private func clearAllPreviousNavigation(){
+        guard let navigationController = self.navigationController else { return }
+        var navigationArray = navigationController.viewControllers
+        let temp = navigationArray.last
+        navigationArray.removeAll()
+        navigationArray.append(temp!)
+        self.navigationController?.viewControllers = navigationArray
     }
 }

@@ -7,16 +7,16 @@
 
 import Foundation
 
-class CardItem {
+class CardItem: Codable{
     var clientName: String
     var validDate: String
     var cardNumber: String
-    var balance: String
+    var balanceLimit: String
     
     init(clientName:String, validDate:String, cardNumber:String, balance:String){
         self.clientName = clientName
         self.validDate = validDate
         self.cardNumber = cardNumber
-        self.balance = balance
+        self.balanceLimit = balance
     }
 }

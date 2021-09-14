@@ -13,12 +13,14 @@ class InputDetailModel{
     var minLength: Int
     var maxLength: Int
     var allowedCharacters: String
+    var passwordMask: Bool
     
-    init(title:String, sutitlePlaceholder:String, minLength: Int, maxLength:Int = 10, allowedCharacters:String = "0123456788."){
+    init(title:String, sutitlePlaceholder:String, minLength: Int, maxLength:Int = 10, allowedCharacters:String = "0123456788.", passwordMask:Bool = false){
         self.title = title
         self.sutitlePlaceholder = sutitlePlaceholder
         self.maxLength = maxLength
         self.minLength = minLength
         self.allowedCharacters = allowedCharacters
+        self.passwordMask = passwordMask
     }
 }

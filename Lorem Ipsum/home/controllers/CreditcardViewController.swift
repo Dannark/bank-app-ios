@@ -16,11 +16,14 @@ class CreditcardViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        name.text = "Daniel Q Pontes"
-        cardNumber.text = "**** **** **** 5037"
-        validThru.text = "23/28"
-        balance.text = "$1500"
+        initializeFields()
+    }
+    
+    private func initializeFields(){
+        name.text = AuthenticationAPIManager.shared.credentials.creditcard?.clientName
+        cardNumber.text = AuthenticationAPIManager.shared.credentials.creditcard?.cardNumber.maskWithAsteriscts(amountIndex: 14)
+        validThru.text = AuthenticationAPIManager.shared.credentials.creditcard?.validDate
+        balance.text = "R$ \(AuthenticationAPIManager.shared.credentials.creditcard?.balanceLimit.toPrice(removeDecimal: true) ?? "-")"
     }
     
 }

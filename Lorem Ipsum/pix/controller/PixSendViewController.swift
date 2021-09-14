@@ -38,4 +38,7 @@ class PixSendViewController: UIViewController, PopUpDelegate  {
     @IBAction func goToQRCode(_ sender: Any) {
         toast(message: "Pagamento QRCode ainda não está disponível.")
     }
+    @IBAction func backButton(_ sender: Any) {
+        self.navigationController?.popToRootViewController(animated: true)
+    }
 }

@@ -37,12 +37,17 @@ class InputViewController: UIViewController, UIViewControllerTransitioningDelega
         }
         inputField.delegate = self
         inputField.becomeFirstResponder()
+        
+        if(payload?.passwordMask == true){
+            inputField.keyboardType = .default
+            inputField.textContentType = .password
+            inputField.isSecureTextEntry = true
+        }
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
         let currentText = textField.text ?? ""
-//        var shouldTypeText = self.delegate?.onValidatingText(typedText: currentText, replacementString: string) ?? false
         
         if(currentText.contains("/")){
             if string == "/"{
@@ -56,7 +61,7 @@ class InputViewController: UIViewController, UIViewControllerTransitioningDelega
         }
         
         if let payload = payload{
-            if CharacterSet(charactersIn: payload.allowedCharacters).isSuperset(of: CharacterSet(charactersIn: string)) {
+            if CharacterSet(charactersIn: payload.allowedCharacters).isSuperset(of: CharacterSet(charactersIn: string)) || payload.allowedCharacters == Presets.ANY {
                 
                 var fullText = currentText + string
                 
