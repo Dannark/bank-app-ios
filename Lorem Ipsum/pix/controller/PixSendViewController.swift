@@ -9,10 +9,6 @@ import UIKit
 
 class PixSendViewController: UIViewController, PopUpDelegate  {
     
-    final var CPF_CHARS = "0123456789.-/"
-    final var NUMERIC_CHARS = "0123456789"
-    final var EMAIL_CHARS = "qwertyuiopasdfghjklçzxcvbnm_.0123456789@"
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -20,22 +16,26 @@ class PixSendViewController: UIViewController, PopUpDelegate  {
     
     func onConfirmedText(typedText: String, tag: String) {
         print("onConfirmed successfully \(typedText) on \(tag)")
+        
+        let storyboard = UIStoryboard(name: "Pix", bundle: nil)
+        let pvc = storyboard.instantiateViewController(withIdentifier: "PixPreviewViewController") as! PixPreviewViewController
+        present(pvc, animated: true)
+        
     }
     
     
     @IBAction func goToCPFInput(sender: AnyObject) {
-        InputViewController.showInputModal(parentVC: self, payload: InputDetailModel(title: "Digite o CPF/CNPJ", sutitlePlaceholder: "", minLength: 11, maxLength: 15, allowedCharacters: CPF_CHARS), sameWindows: true, tag: "CPF")
+        InputViewController.showInputModal(parentVC: self, payload: InputDetailModel(title: "Digite o CPF/CNPJ", sutitlePlaceholder: "", minLength: 11, maxLength: 15, allowedCharacters: Presets.CPF_CHARS), sameWindows: true, tag: "CPF")
     }
     
     @IBAction func goToPhoneInput(_ sender: Any) {
-        InputViewController.showInputModal(parentVC: self, payload: InputDetailModel(title: "Digite o telefone", sutitlePlaceholder: "", minLength: 11, maxLength: 11, allowedCharacters: NUMERIC_CHARS), sameWindows: true, tag: "PHONE")
+        InputViewController.showInputModal(parentVC: self, payload: InputDetailModel(title: "Digite o telefone", sutitlePlaceholder: "", minLength: 11, maxLength: 11, allowedCharacters: Presets.NUMERIC_CHARS), sameWindows: true, tag: "PHONE")
     }
     @IBAction func goToEmail(_ sender: Any) {
-        InputViewController.showInputModal(parentVC: self, payload: InputDetailModel(title: "Digite o Email", sutitlePlaceholder: "user@mail.com", minLength: 8, maxLength: 60, allowedCharacters: EMAIL_CHARS), sameWindows: true, tag: "EMAIL")
+        InputViewController.showInputModal(parentVC: self, payload: InputDetailModel(title: "Digite o Email", sutitlePlaceholder: "user@mail.com", minLength: 8, maxLength: 60, allowedCharacters: Presets.EMAIL_CHARS), sameWindows: true, tag: "EMAIL")
     }
     
     @IBAction func goToQRCode(_ sender: Any) {
         toast(message: "Pagamento QRCode ainda não está disponível.")
     }
 }
-

@@ -36,6 +36,7 @@ class InputViewController: UIViewController, UIViewControllerTransitioningDelega
             validateConfirmButton(amount: 0, minLength: payload!.minLength)
         }
         inputField.delegate = self
+        inputField.becomeFirstResponder()
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
@@ -104,7 +105,7 @@ class InputViewController: UIViewController, UIViewControllerTransitioningDelega
     
     //MARK:- Functions to display modal on bottom
     static func showInputModal(parentVC: UIViewController, payload: InputDetailModel, sameWindows:Bool, tag:String){
-        let storyboard = UIStoryboard(name: "Pix", bundle: nil)
+        let storyboard = UIStoryboard(name: "InputModal", bundle: nil)
         let pvc = storyboard.instantiateViewController(withIdentifier: "InputViewController")
 
         if(sameWindows){

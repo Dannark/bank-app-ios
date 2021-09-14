@@ -10,8 +10,15 @@
 		6502D96426EE909B001376AC /* InputDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6502D96326EE909B001376AC /* InputDetailModel.swift */; };
 		65345A8A26ED5688001ABDC3 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65345A8926ED5688001ABDC3 /* HomeTableViewController.swift */; };
 		655FBF7B26ED6716006AA5DC /* Pix.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 655FBF7A26ED6716006AA5DC /* Pix.storyboard */; };
+		65920C7C26EFF7FE0027D6DF /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65920C7B26EFF7FE0027D6DF /* String+Extensions.swift */; };
+		65920C7E26F0032E0027D6DF /* PasswordCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65920C7D26F0032E0027D6DF /* PasswordCheckViewController.swift */; };
+		65920C8126F01C7E0027D6DF /* PasswordCheck.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65920C8026F01C7E0027D6DF /* PasswordCheck.storyboard */; };
+		65920C8426F024B00027D6DF /* InputModal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65920C8326F024B00027D6DF /* InputModal.storyboard */; };
+		65920C8726F0282F0027D6DF /* PixConfirmedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65920C8626F0282F0027D6DF /* PixConfirmedViewController.swift */; };
 		659A9DEB26EE686D00E102ED /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659A9DEA26EE686D00E102ED /* InputViewController.swift */; };
 		659A9DEE26EE691400E102ED /* PixSendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659A9DED26EE691400E102ED /* PixSendViewController.swift */; };
+		65B1814526EFC6B700197AFC /* PixPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B1814426EFC6B700197AFC /* PixPreviewViewController.swift */; };
+		65B1814726EFCCF800197AFC /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B1814626EFCCF800197AFC /* Utils.swift */; };
 		65B530A826E7E905002B73A4 /* CreditcardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B530A726E7E905002B73A4 /* CreditcardViewController.swift */; };
 		65B530AA26E7ECA8002B73A4 /* CardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B530A926E7ECA8002B73A4 /* CardItem.swift */; };
 		65BBF0C126E6E21900C9F598 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BBF0C026E6E21900C9F598 /* AppDelegate.swift */; };
@@ -47,8 +54,15 @@
 		6502D96326EE909B001376AC /* InputDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputDetailModel.swift; sourceTree = "<group>"; };
 		65345A8926ED5688001ABDC3 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		655FBF7A26ED6716006AA5DC /* Pix.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Pix.storyboard; sourceTree = "<group>"; };
+		65920C7B26EFF7FE0027D6DF /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		65920C7D26F0032E0027D6DF /* PasswordCheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordCheckViewController.swift; sourceTree = "<group>"; };
+		65920C8026F01C7E0027D6DF /* PasswordCheck.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PasswordCheck.storyboard; sourceTree = "<group>"; };
+		65920C8326F024B00027D6DF /* InputModal.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InputModal.storyboard; sourceTree = "<group>"; };
+		65920C8626F0282F0027D6DF /* PixConfirmedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixConfirmedViewController.swift; sourceTree = "<group>"; };
 		659A9DEA26EE686D00E102ED /* InputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
 		659A9DED26EE691400E102ED /* PixSendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixSendViewController.swift; sourceTree = "<group>"; };
+		65B1814426EFC6B700197AFC /* PixPreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixPreviewViewController.swift; sourceTree = "<group>"; };
+		65B1814626EFCCF800197AFC /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		65B530A726E7E905002B73A4 /* CreditcardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditcardViewController.swift; sourceTree = "<group>"; };
 		65B530A926E7ECA8002B73A4 /* CardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardItem.swift; sourceTree = "<group>"; };
 		65BBF0BD26E6E21900C9F598 /* Lorem Bank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lorem Bank.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,6 +120,8 @@
 			isa = PBXGroup;
 			children = (
 				65BBF0F026E7097A00C9F598 /* HelperExtensions.swift */,
+				65B1814626EFCCF800197AFC /* Utils.swift */,
+				65920C7B26EFF7FE0027D6DF /* String+Extensions.swift */,
 			);
 			path = util;
 			sourceTree = "<group>";
@@ -128,11 +144,39 @@
 			path = view;
 			sourceTree = "<group>";
 		};
-		659A9DE926EE684F00E102ED /* controller */ = {
+		65920C7F26F01C5B0027D6DF /* misc */ = {
+			isa = PBXGroup;
+			children = (
+				65920C8526F0252C0027D6DF /* controller */,
+				65920C8226F024890027D6DF /* view */,
+			);
+			path = misc;
+			sourceTree = "<group>";
+		};
+		65920C8226F024890027D6DF /* view */ = {
+			isa = PBXGroup;
+			children = (
+				65920C8026F01C7E0027D6DF /* PasswordCheck.storyboard */,
+				65920C8326F024B00027D6DF /* InputModal.storyboard */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		65920C8526F0252C0027D6DF /* controller */ = {
 			isa = PBXGroup;
 			children = (
 				659A9DEA26EE686D00E102ED /* InputViewController.swift */,
+				65920C7D26F0032E0027D6DF /* PasswordCheckViewController.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		659A9DE926EE684F00E102ED /* controller */ = {
+			isa = PBXGroup;
+			children = (
 				659A9DED26EE691400E102ED /* PixSendViewController.swift */,
+				65B1814426EFC6B700197AFC /* PixPreviewViewController.swift */,
+				65920C8626F0282F0027D6DF /* PixConfirmedViewController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -186,6 +230,7 @@
 		65BBF0BF26E6E21900C9F598 /* Lorem Ipsum */ = {
 			isa = PBXGroup;
 			children = (
+				65920C7F26F01C5B0027D6DF /* misc */,
 				6502D96526EEAE20001376AC /* util */,
 				655FBF7826ED65A1006AA5DC /* pix */,
 				65B530A426E7E5D2002B73A4 /* home */,
@@ -323,9 +368,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				65BBF0CD26E6E21A00C9F598 /* LaunchScreen.storyboard in Resources */,
+				65920C8426F024B00027D6DF /* InputModal.storyboard in Resources */,
 				65BBF0CA26E6E21A00C9F598 /* Assets.xcassets in Resources */,
 				655FBF7B26ED6716006AA5DC /* Pix.storyboard in Resources */,
 				65BBF0C826E6E21900C9F598 /* Main.storyboard in Resources */,
+				65920C8126F01C7E0027D6DF /* PasswordCheck.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,15 +399,20 @@
 			files = (
 				6502D96426EE909B001376AC /* InputDetailModel.swift in Sources */,
 				65345A8A26ED5688001ABDC3 /* HomeTableViewController.swift in Sources */,
+				65920C7E26F0032E0027D6DF /* PasswordCheckViewController.swift in Sources */,
 				65B530A826E7E905002B73A4 /* CreditcardViewController.swift in Sources */,
+				65920C8726F0282F0027D6DF /* PixConfirmedViewController.swift in Sources */,
 				659A9DEE26EE691400E102ED /* PixSendViewController.swift in Sources */,
 				65CDB1A926E70C93008798C9 /* HomeViewController.swift in Sources */,
 				65B530AA26E7ECA8002B73A4 /* CardItem.swift in Sources */,
 				65BBF0C526E6E21900C9F598 /* ViewController.swift in Sources */,
+				65B1814726EFCCF800197AFC /* Utils.swift in Sources */,
+				65920C7C26EFF7FE0027D6DF /* String+Extensions.swift in Sources */,
 				65BBF0F126E7097A00C9F598 /* HelperExtensions.swift in Sources */,
 				65BBF0C126E6E21900C9F598 /* AppDelegate.swift in Sources */,
 				659A9DEB26EE686D00E102ED /* InputViewController.swift in Sources */,
 				65BBF0C326E6E21900C9F598 /* SceneDelegate.swift in Sources */,
+				65B1814526EFC6B700197AFC /* PixPreviewViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

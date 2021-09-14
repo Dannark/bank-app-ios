@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Input View Controller-->
+        <scene sceneID="41l-YJ-Fu9">
+            <objects>
+                <viewController storyboardIdentifier="InputViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6Od-AX-ehh" customClass="InputViewController" customModule="Lorem_Bank" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B2J-S7-clR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UHs-lq-TxL" userLabel="custom bottom sheet">
+                                <rect key="frame" x="0.0" y="690" width="414" height="206"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Digite o CPF/CNPJ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aM1-RG-zVi">
+                                        <rect key="frame" x="16" y="25" width="201" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Hbz-fA-YF2">
+                                        <rect key="frame" x="16" y="63" width="382" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="W8B-Yo-Eah"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" textContentType="tel"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b3R-dT-pPB">
+                                        <rect key="frame" x="16" y="111" width="187" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Mdn-0p-Aix"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <state key="normal" title="CANCELAR">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="cancelButton:" destination="6Od-AX-ehh" eventType="touchUpInside" id="laH-BY-rDZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gna-tM-jRQ">
+                                        <rect key="frame" x="211" y="111" width="187" height="40"/>
+                                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="qxA-TJ-OJH"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <state key="normal" title="CONFIRMAR">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="confirmButton:" destination="6Od-AX-ehh" eventType="touchUpInside" id="bdg-Nu-CJG"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="b3R-dT-pPB" firstAttribute="top" secondItem="Hbz-fA-YF2" secondAttribute="bottom" constant="8" id="4cB-kS-duh"/>
+                                    <constraint firstItem="aM1-RG-zVi" firstAttribute="top" secondItem="UHs-lq-TxL" secondAttribute="top" constant="25" id="6Qd-4Z-Sho"/>
+                                    <constraint firstItem="Hbz-fA-YF2" firstAttribute="top" secondItem="aM1-RG-zVi" secondAttribute="bottom" constant="8" id="FSX-Bx-sfP"/>
+                                    <constraint firstAttribute="trailing" secondItem="gna-tM-jRQ" secondAttribute="trailing" constant="16" id="Jhe-Cb-IJx"/>
+                                    <constraint firstItem="b3R-dT-pPB" firstAttribute="leading" secondItem="UHs-lq-TxL" secondAttribute="leading" constant="16" id="Ssj-MS-hXi"/>
+                                    <constraint firstItem="gna-tM-jRQ" firstAttribute="leading" secondItem="b3R-dT-pPB" secondAttribute="trailing" constant="8" id="VOr-Y8-tes"/>
+                                    <constraint firstAttribute="bottom" secondItem="b3R-dT-pPB" secondAttribute="bottom" constant="55" identifier="distanceToBottom" id="XxE-ly-P4u" customClass="Inp"/>
+                                    <constraint firstItem="aM1-RG-zVi" firstAttribute="leading" secondItem="UHs-lq-TxL" secondAttribute="leading" constant="16" id="als-zl-nCO"/>
+                                    <constraint firstItem="gna-tM-jRQ" firstAttribute="width" secondItem="b3R-dT-pPB" secondAttribute="width" id="fm5-67-4C4"/>
+                                    <constraint firstItem="gna-tM-jRQ" firstAttribute="bottom" secondItem="b3R-dT-pPB" secondAttribute="bottom" id="iAJ-9S-Naa"/>
+                                    <constraint firstAttribute="trailing" secondItem="Hbz-fA-YF2" secondAttribute="trailing" constant="16" id="kj8-zQ-LYf"/>
+                                    <constraint firstItem="Hbz-fA-YF2" firstAttribute="leading" secondItem="UHs-lq-TxL" secondAttribute="leading" constant="16" id="n3h-br-s5P"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" systemColor="systemGray5Color"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yXd-ck-xXE"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="UHs-lq-TxL" firstAttribute="leading" secondItem="yXd-ck-xXE" secondAttribute="leading" id="MHu-Fc-f3H"/>
+                            <constraint firstItem="yXd-ck-xXE" firstAttribute="trailing" secondItem="UHs-lq-TxL" secondAttribute="trailing" id="iYt-G8-7ZZ"/>
+                            <constraint firstAttribute="bottom" secondItem="UHs-lq-TxL" secondAttribute="bottom" id="rdk-A3-DYu"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Xpx-bx-4Eb"/>
+                    <connections>
+                        <outlet property="confimButton" destination="gna-tM-jRQ" id="saa-RB-VgW"/>
+                        <outlet property="distanceToBottom" destination="XxE-ly-P4u" id="c0Q-Hg-5Ma"/>
+                        <outlet property="inputField" destination="Hbz-fA-YF2" id="5pD-3d-EWO"/>
+                        <outlet property="titleLabel" destination="aM1-RG-zVi" id="TRR-Df-V2c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zid-RJ-QO8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="486.95652173913049" y="47.544642857142854"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
