@@ -40,7 +40,6 @@ class HomeTableViewController: UITableViewController {
     @IBAction func onTransferPixTouch(_ sender: Any) {
     }
     @IBAction func onReceivedPixTouch(_ sender: Any) {
-        InputViewController.showInputModal(parentVC: self, payload: InputDetailModel(title: "Qual o valor a ser pago?", sutitlePlaceholder: "R$ 0.00", minLength: 1, maxLength: 10, allowedCharacters: Presets.NUMERIC_CHARS), sameWindows: true, tag: "PIXRECEIVE")
     }
     @IBAction func onLimitePixTouch(_ sender: Any) {
     }

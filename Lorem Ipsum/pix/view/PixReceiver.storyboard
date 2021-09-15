@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Pix Receiver View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="PixReceiverViewController" customModule="Lorem_Bank" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quer adicionar informações ao QR Code?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="03w-k4-wsO">
+                                <rect key="frame" x="16" y="113" width="382" height="60"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Você também pode criar um QR Code sem valor atrelado. Neste caso, a pessoa que irá efetuar o pagamento insere o valor." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ldc-uk-1Xb">
+                                <rect key="frame" x="16" y="255" width="382" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chave" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S4z-Sc-mzN">
+                                <rect key="frame" x="16" y="316" width="35.5" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00898487218" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iB4-dI-Tpo">
+                                <rect key="frame" x="16" y="346.5" width="382" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descrição (Opcicional)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tuz-9y-wxu">
+                                <rect key="frame" x="16" y="398" width="129" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4hn-9O-wJh" userLabel="digitar valor">
+                                <rect key="frame" x="16" y="189" width="382" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 0,00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Izn-nf-8t9">
+                                        <rect key="frame" x="8" y="14.5" width="59.5" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qus-C4-cbe" userLabel="edit_chave">
+                                        <rect key="frame" x="362" y="14" width="20" height="22"/>
+                                        <color key="tintColor" systemColor="systemGrayColor"/>
+                                        <state key="normal" image="pencil.circle.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="editValue:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="9Ck-6z-FnU"/>
+                                            <action selector="edit_key:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="hkt-S1-nXK"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="Izn-nf-8t9" firstAttribute="centerY" secondItem="4hn-9O-wJh" secondAttribute="centerY" id="DQI-DI-Bar"/>
+                                    <constraint firstItem="Qus-C4-cbe" firstAttribute="centerY" secondItem="Izn-nf-8t9" secondAttribute="centerY" id="TOl-yF-kis"/>
+                                    <constraint firstItem="Izn-nf-8t9" firstAttribute="leading" secondItem="4hn-9O-wJh" secondAttribute="leading" constant="8" id="pgY-6Q-Ybj"/>
+                                    <constraint firstAttribute="trailing" secondItem="Qus-C4-cbe" secondAttribute="trailing" id="vyL-sw-ZhE"/>
+                                    <constraint firstAttribute="height" constant="50" id="z71-UP-5Fz"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CNW-3S-868" userLabel="description">
+                                <rect key="frame" x="16" y="428.5" width="382" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hsR-hU-pri">
+                                <rect key="frame" x="16" y="198" width="130" height="30"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="Up8-Uw-viD"/>
+                                    <constraint firstAttribute="height" constant="30" id="YRc-On-Snj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="INSERIR VALOR">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="14"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="insertValue:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Ejm-WG-qaz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vHv-3s-PDD">
+                                <rect key="frame" x="16" y="806" width="382" height="40"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Q3G-kD-ZWq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="CRIAR QR CODE">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="createQRCode:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="GWY-MN-cSP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BwR-4u-mL4" userLabel="edit_chave">
+                                <rect key="frame" x="378" y="312.5" width="20" height="22"/>
+                                <color key="tintColor" systemColor="systemGrayColor"/>
+                                <state key="normal" image="pencil.circle.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="edit_key:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="tI7-I2-XDC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2E8-zn-rAA" userLabel="edit_description">
+                                <rect key="frame" x="378" y="394.5" width="20" height="22"/>
+                                <color key="tintColor" systemColor="systemGrayColor"/>
+                                <state key="normal" image="pencil.circle.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="editDescription:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="0vE-AL-caQ"/>
+                                </connections>
+                            </button>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y7j-wt-gPZ">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Receber Pix" id="Uvi-qg-LcX">
+                                        <barButtonItem key="leftBarButtonItem" image="chevron.backward" catalog="system" id="lQs-4A-fQX">
+                                            <connections>
+                                                <action selector="onBackButton:" destination="Y6W-OH-hqX" id="CHX-fU-Vrb"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="y7j-wt-gPZ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="0YH-U8-rOH"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="4hn-9O-wJh" secondAttribute="trailing" constant="16" id="1ch-vb-nrh"/>
+                            <constraint firstAttribute="trailing" secondItem="ldc-uk-1Xb" secondAttribute="trailing" constant="16" id="3J8-YF-BeI"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="CNW-3S-868" secondAttribute="trailing" constant="16" id="5Nr-hR-VDN"/>
+                            <constraint firstItem="2E8-zn-rAA" firstAttribute="centerY" secondItem="tuz-9y-wxu" secondAttribute="centerY" id="6RI-ae-4VI"/>
+                            <constraint firstItem="hsR-hU-pri" firstAttribute="top" secondItem="03w-k4-wsO" secondAttribute="bottom" constant="25" id="6xn-A6-RyW"/>
+                            <constraint firstItem="tuz-9y-wxu" firstAttribute="top" secondItem="iB4-dI-Tpo" secondAttribute="bottom" constant="32" id="8ZZ-yk-btC"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="vHv-3s-PDD" secondAttribute="trailing" constant="16" id="8qa-he-b0w"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="iB4-dI-Tpo" secondAttribute="trailing" constant="16" id="CJO-af-eQl"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="vHv-3s-PDD" secondAttribute="bottom" constant="16" id="Dgm-Gr-Pfb"/>
+                            <constraint firstItem="03w-k4-wsO" firstAttribute="top" secondItem="y7j-wt-gPZ" secondAttribute="bottom" constant="25" id="DiZ-Wh-6zr"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="BwR-4u-mL4" secondAttribute="trailing" constant="16" id="GZT-PG-dZn"/>
+                            <constraint firstAttribute="trailing" secondItem="03w-k4-wsO" secondAttribute="trailing" constant="16" id="SMr-Ha-Knc"/>
+                            <constraint firstItem="tuz-9y-wxu" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="TGN-ps-idf"/>
+                            <constraint firstItem="CNW-3S-868" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="VX2-ue-DQs"/>
+                            <constraint firstItem="ldc-uk-1Xb" firstAttribute="top" secondItem="4hn-9O-wJh" secondAttribute="bottom" constant="16" id="Vhd-fo-s0W"/>
+                            <constraint firstItem="S4z-Sc-mzN" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="YkG-zv-Gna"/>
+                            <constraint firstItem="03w-k4-wsO" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="a45-2s-7dR"/>
+                            <constraint firstItem="y7j-wt-gPZ" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="bsK-NY-RZQ"/>
+                            <constraint firstItem="4hn-9O-wJh" firstAttribute="top" secondItem="03w-k4-wsO" secondAttribute="bottom" constant="16" id="doF-HT-Es5"/>
+                            <constraint firstItem="CNW-3S-868" firstAttribute="top" secondItem="tuz-9y-wxu" secondAttribute="bottom" constant="16" id="f83-Rz-DsD"/>
+                            <constraint firstItem="iB4-dI-Tpo" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="jSe-n6-SRa"/>
+                            <constraint firstItem="ldc-uk-1Xb" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="jcg-bi-2UJ"/>
+                            <constraint firstItem="iB4-dI-Tpo" firstAttribute="top" secondItem="S4z-Sc-mzN" secondAttribute="bottom" constant="16" id="jjY-kS-8tC"/>
+                            <constraint firstItem="vHv-3s-PDD" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="lOV-Z1-di2"/>
+                            <constraint firstItem="hsR-hU-pri" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="slR-B5-NSS"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="2E8-zn-rAA" secondAttribute="trailing" constant="16" id="v16-ci-sQl"/>
+                            <constraint firstItem="S4z-Sc-mzN" firstAttribute="top" secondItem="ldc-uk-1Xb" secondAttribute="bottom" constant="32" id="vOd-ic-Zvr"/>
+                            <constraint firstItem="4hn-9O-wJh" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="xTb-OE-JsL"/>
+                            <constraint firstAttribute="trailing" secondItem="y7j-wt-gPZ" secondAttribute="trailing" id="ydI-Tz-JEn"/>
+                            <constraint firstItem="BwR-4u-mL4" firstAttribute="centerY" secondItem="S4z-Sc-mzN" secondAttribute="centerY" id="zvm-tm-8PC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="container" destination="4hn-9O-wJh" id="EZy-s6-9Lj"/>
+                        <outlet property="descriptionLabel" destination="CNW-3S-868" id="VgR-nu-h65"/>
+                        <outlet property="insertValueButton" destination="hsR-hU-pri" id="TxP-VJ-xMG"/>
+                        <outlet property="keyLabel" destination="iB4-dI-Tpo" id="4Co-a6-ewM"/>
+                        <outlet property="valueInserted" destination="Izn-nf-8t9" id="ULN-SJ-nsg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="50.892857142857139"/>
+        </scene>
+        <!--PixQR Code View Controller-->
+        <scene sceneID="aaO-o7-fll">
+            <objects>
+                <viewController storyboardIdentifier="PixQRCodeViewController" id="K5F-n6-iPK" customClass="PixQRCodeViewController" customModule="Lorem_Bank" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WeO-OS-IJL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0cs-cG-FRC">
+                                <rect key="frame" x="132" y="164" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="UEc-9n-gqZ"/>
+                                    <constraint firstAttribute="height" constant="150" id="zHV-Cj-Pho"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Btk-ex-Qdx">
+                                <rect key="frame" x="16" y="758" width="116" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="AS6-GP-Nhb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="tintColor" systemColor="systemPinkColor"/>
+                                <state key="normal" title="  Compartilhar" image="shuffle" catalog="system">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareQRCode:" destination="K5F-n6-iPK" eventType="touchUpInside" id="7fm-FG-eJd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wfE-Qf-Yl3">
+                                <rect key="frame" x="16" y="806" width="382" height="40"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="mcX-Wm-ybN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="OK">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="confirmButton:" destination="K5F-n6-iPK" eventType="touchUpInside" id="wMJ-4I-RVR"/>
+                                    <action selector="createQRCode:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="apN-4I-u1k"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="exK-rr-EVS">
+                                <rect key="frame" x="16" y="710" width="105" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="e7c-AD-qls"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="tintColor" systemColor="systemPinkColor"/>
+                                <state key="normal" title="  Copiar Link" image="shuffle" catalog="system">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="copyCQCode:" destination="K5F-n6-iPK" eventType="touchUpInside" id="fd6-Mx-v1Y"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pronto!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xb4-2H-axP">
+                                <rect key="frame" x="155" y="103" width="104" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 900,00" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cW7-bn-LXh">
+                                <rect key="frame" x="16" y="339" width="382" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="34X-en-YqX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="34X-en-YqX" firstAttribute="bottom" secondItem="wfE-Qf-Yl3" secondAttribute="bottom" constant="16" id="02w-Wg-gXx"/>
+                            <constraint firstItem="Btk-ex-Qdx" firstAttribute="top" secondItem="exK-rr-EVS" secondAttribute="bottom" constant="16" id="6Wz-wt-RMj"/>
+                            <constraint firstItem="cW7-bn-LXh" firstAttribute="top" secondItem="0cs-cG-FRC" secondAttribute="bottom" constant="25" id="6mX-hN-OpA"/>
+                            <constraint firstItem="34X-en-YqX" firstAttribute="trailing" secondItem="cW7-bn-LXh" secondAttribute="trailing" constant="16" id="ATO-ba-wvN"/>
+                            <constraint firstItem="0cs-cG-FRC" firstAttribute="centerX" secondItem="WeO-OS-IJL" secondAttribute="centerX" id="Dun-vn-9pI"/>
+                            <constraint firstItem="cW7-bn-LXh" firstAttribute="leading" secondItem="34X-en-YqX" secondAttribute="leading" constant="16" id="Mm5-Io-EUJ"/>
+                            <constraint firstAttribute="trailing" secondItem="wfE-Qf-Yl3" secondAttribute="trailing" constant="16" id="OIG-R2-Brq"/>
+                            <constraint firstItem="0cs-cG-FRC" firstAttribute="top" secondItem="34X-en-YqX" secondAttribute="top" constant="120" id="TVh-da-8II"/>
+                            <constraint firstItem="exK-rr-EVS" firstAttribute="leading" secondItem="34X-en-YqX" secondAttribute="leading" constant="16" id="a8b-oC-4eO"/>
+                            <constraint firstItem="wfE-Qf-Yl3" firstAttribute="leading" secondItem="34X-en-YqX" secondAttribute="leading" constant="16" id="igm-wQ-J9C"/>
+                            <constraint firstItem="Xb4-2H-axP" firstAttribute="centerX" secondItem="WeO-OS-IJL" secondAttribute="centerX" id="kXb-iZ-Vtk"/>
+                            <constraint firstItem="0cs-cG-FRC" firstAttribute="top" secondItem="Xb4-2H-axP" secondAttribute="bottom" constant="25" id="qpT-r8-hid"/>
+                            <constraint firstItem="Btk-ex-Qdx" firstAttribute="leading" secondItem="34X-en-YqX" secondAttribute="leading" constant="16" id="rlK-fX-Jri"/>
+                            <constraint firstItem="wfE-Qf-Yl3" firstAttribute="top" secondItem="Btk-ex-Qdx" secondAttribute="bottom" constant="16" id="tq9-oG-Lau"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="qrCodeImage" destination="0cs-cG-FRC" id="agq-8a-sgq"/>
+                        <outlet property="qrDescription" destination="cW7-bn-LXh" id="yX5-fS-v6h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zNX-0r-hBT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="850.72463768115949" y="50.892857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
+        <image name="pencil.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="shuffle" catalog="system" width="128" height="93"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

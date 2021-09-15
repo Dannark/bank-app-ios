@@ -26,6 +26,9 @@
 		65989F4526F1071D00FB93E6 /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65989F4426F1071D00FB93E6 /* AccountModel.swift */; };
 		65989F4826F13DC100FB93E6 /* InvoiceItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65989F4726F13DC100FB93E6 /* InvoiceItem.swift */; };
 		65989F4A26F1452200FB93E6 /* PixLimitConfirmedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65989F4926F1452200FB93E6 /* PixLimitConfirmedViewController.swift */; };
+		65989F4C26F14E4100FB93E6 /* PixReceiver.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65989F4B26F14E4100FB93E6 /* PixReceiver.storyboard */; };
+		65989F4E26F1577E00FB93E6 /* PixReceiverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65989F4D26F1577E00FB93E6 /* PixReceiverViewController.swift */; };
+		65989F5026F1644F00FB93E6 /* PixQRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65989F4F26F1644F00FB93E6 /* PixQRCodeViewController.swift */; };
 		659A9DEB26EE686D00E102ED /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659A9DEA26EE686D00E102ED /* InputViewController.swift */; };
 		659A9DEE26EE691400E102ED /* PixSendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659A9DED26EE691400E102ED /* PixSendViewController.swift */; };
 		65B1814526EFC6B700197AFC /* PixPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B1814426EFC6B700197AFC /* PixPreviewViewController.swift */; };
@@ -41,7 +44,6 @@
 		65BBF0D826E6E21B00C9F598 /* Lorem_IpsumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BBF0D726E6E21B00C9F598 /* Lorem_IpsumTests.swift */; };
 		65BBF0E326E6E21B00C9F598 /* Lorem_IpsumUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BBF0E226E6E21B00C9F598 /* Lorem_IpsumUITests.swift */; };
 		65BBF0F126E7097A00C9F598 /* HelperExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BBF0F026E7097A00C9F598 /* HelperExtensions.swift */; };
-		65CDB1A926E70C93008798C9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CDB1A826E70C93008798C9 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +83,9 @@
 		65989F4426F1071D00FB93E6 /* AccountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModel.swift; sourceTree = "<group>"; };
 		65989F4726F13DC100FB93E6 /* InvoiceItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceItem.swift; sourceTree = "<group>"; };
 		65989F4926F1452200FB93E6 /* PixLimitConfirmedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixLimitConfirmedViewController.swift; sourceTree = "<group>"; };
+		65989F4B26F14E4100FB93E6 /* PixReceiver.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PixReceiver.storyboard; sourceTree = "<group>"; };
+		65989F4D26F1577E00FB93E6 /* PixReceiverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixReceiverViewController.swift; sourceTree = "<group>"; };
+		65989F4F26F1644F00FB93E6 /* PixQRCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixQRCodeViewController.swift; sourceTree = "<group>"; };
 		659A9DEA26EE686D00E102ED /* InputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
 		659A9DED26EE691400E102ED /* PixSendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixSendViewController.swift; sourceTree = "<group>"; };
 		65B1814426EFC6B700197AFC /* PixPreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixPreviewViewController.swift; sourceTree = "<group>"; };
@@ -102,7 +107,6 @@
 		65BBF0E226E6E21B00C9F598 /* Lorem_IpsumUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lorem_IpsumUITests.swift; sourceTree = "<group>"; };
 		65BBF0E426E6E21B00C9F598 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65BBF0F026E7097A00C9F598 /* HelperExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperExtensions.swift; sourceTree = "<group>"; };
-		65CDB1A826E70C93008798C9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +167,7 @@
 			children = (
 				655FBF7A26ED6716006AA5DC /* Pix.storyboard */,
 				65920C8826F039EA0027D6DF /* LimitPix.storyboard */,
+				65989F4B26F14E4100FB93E6 /* PixReceiver.storyboard */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -256,6 +261,8 @@
 				65920C8626F0282F0027D6DF /* PixConfirmedViewController.swift */,
 				65920C8A26F03EE20027D6DF /* PixLimitViewController.swift */,
 				65989F4926F1452200FB93E6 /* PixLimitConfirmedViewController.swift */,
+				65989F4D26F1577E00FB93E6 /* PixReceiverViewController.swift */,
+				65989F4F26F1644F00FB93E6 /* PixQRCodeViewController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -322,7 +329,6 @@
 				65BBF0C926E6E21A00C9F598 /* Assets.xcassets */,
 				65BBF0CB26E6E21A00C9F598 /* LaunchScreen.storyboard */,
 				65BBF0CE26E6E21A00C9F598 /* Info.plist */,
-				65CDB1A826E70C93008798C9 /* HomeViewController.swift */,
 			);
 			path = "Lorem Ipsum";
 			sourceTree = "<group>";
@@ -450,6 +456,7 @@
 			files = (
 				65920C9126F049AF0027D6DF /* Login.storyboard in Resources */,
 				65BBF0CD26E6E21A00C9F598 /* LaunchScreen.storyboard in Resources */,
+				65989F4C26F14E4100FB93E6 /* PixReceiver.storyboard in Resources */,
 				65920C8926F039EA0027D6DF /* LimitPix.storyboard in Resources */,
 				65920C8426F024B00027D6DF /* InputModal.storyboard in Resources */,
 				65BBF0CA26E6E21A00C9F598 /* Assets.xcassets in Resources */,
@@ -490,7 +497,8 @@
 				65920C8726F0282F0027D6DF /* PixConfirmedViewController.swift in Sources */,
 				659A9DEE26EE691400E102ED /* PixSendViewController.swift in Sources */,
 				65989F4A26F1452200FB93E6 /* PixLimitConfirmedViewController.swift in Sources */,
-				65CDB1A926E70C93008798C9 /* HomeViewController.swift in Sources */,
+				65989F5026F1644F00FB93E6 /* PixQRCodeViewController.swift in Sources */,
+				65989F4E26F1577E00FB93E6 /* PixReceiverViewController.swift in Sources */,
 				65989F4526F1071D00FB93E6 /* AccountModel.swift in Sources */,
 				65B530AA26E7ECA8002B73A4 /* CardItem.swift in Sources */,
 				65BBF0C526E6E21900C9F598 /* ViewController.swift in Sources */,

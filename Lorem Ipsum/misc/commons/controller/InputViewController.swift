@@ -97,7 +97,7 @@ class InputViewController: UIViewController, UIViewControllerTransitioningDelega
     
     @IBAction func cancelButton(_ sender: Any) {
         dismiss(animated: true) {
-            print("dissmiss")
+            
         }
     }
     @IBAction func confirmButton(_ sender: Any) {

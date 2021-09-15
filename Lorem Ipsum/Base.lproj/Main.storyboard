@@ -17,7 +17,17 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1jT-Bb-pfw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="112" y="-62"/>
+            <point key="canvasLocation" x="112" y="-56"/>
+        </scene>
+        <!--PixReceiver-->
+        <scene sceneID="AeB-zm-eO6">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PixReceiver" id="YL3-rh-aQa" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="UCk-pZ-zcA"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="maz-e8-mom" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="128" y="-74"/>
         </scene>
         <!--Pix-->
         <scene sceneID="6LG-t7-Sqw">
@@ -213,6 +223,7 @@
                                                                     </userDefinedRuntimeAttributes>
                                                                     <connections>
                                                                         <action selector="onReceivedPixTouch:" destination="Bju-jD-HF2" eventType="touchUpInside" id="lKe-VV-LV6"/>
+                                                                        <segue destination="YL3-rh-aQa" kind="show" id="BYt-fT-qKW"/>
                                                                     </connections>
                                                                 </button>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Receber" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pKP-kq-dfN">
