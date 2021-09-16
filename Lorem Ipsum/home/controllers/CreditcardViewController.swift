@@ -9,7 +9,7 @@ import UIKit
 
 class CreditcardViewController: UIViewController {
 
-    @IBOutlet var name: UILabel!
+    @IBOutlet var clientName: UILabel!
     @IBOutlet var cardNumber: UILabel!
     @IBOutlet var validThru: UILabel!
     @IBOutlet var balance: UILabel!
@@ -20,7 +20,7 @@ class CreditcardViewController: UIViewController {
     }
     
     private func initializeFields(){
-        name.text = AuthenticationAPIManager.shared.credentials.creditcard?.clientName
+        clientName.text = AuthenticationAPIManager.shared.credentials.creditcard?.clientName
         cardNumber.text = AuthenticationAPIManager.shared.credentials.creditcard?.cardNumber.maskWithAsteriscts(amountIndex: 14)
         validThru.text = AuthenticationAPIManager.shared.credentials.creditcard?.validDate
         balance.text = "R$ \(AuthenticationAPIManager.shared.credentials.creditcard?.balanceLimit.toPrice(removeDecimal: true) ?? "-")"

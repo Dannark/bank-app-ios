@@ -17,8 +17,21 @@ class PixPreviewViewController: UIViewController, PopUpDelegate, PasswordDelegat
     
     @IBOutlet var confirmButton: UIButton!
     
+    @IBOutlet var userName: UILabel!
+    @IBOutlet var bankName: UILabel!
+    @IBOutlet var agencyName: UILabel!
+    @IBOutlet var cpfName: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        fillDialog()
+    }
+    
+    private func fillDialog(){
+        userName.text = PixAPIManager.shared.credentials.name
+        bankName.text = PixAPIManager.shared.credentials.account?.bank
+        agencyName.text = "Agência: \(PixAPIManager.shared.credentials.account?.agency ?? "-") Conta: \(PixAPIManager.shared.credentials.account?.number ?? "-")"
+        cpfName.text = PixAPIManager.shared.credentials.cpf?.maskWithAsteriscts(amountIndex: 6)
     }
     
     private func openInputValueDialog(){
@@ -52,17 +65,43 @@ class PixPreviewViewController: UIViewController, PopUpDelegate, PasswordDelegat
     }
     
     func onPasswordCheck(check: Bool, tag: String) {
-        print("password is \(check)")
         if check {
-            navigateToConfirmView()
+            sendPix()
+        }
+    }
+    
+    private func sendPix(){
+        PixAPIManager.shared.sendPix(
+            PixAPIManager.shared.credentials.cpf!, pixValue.text!, AuthenticationAPIManager.shared.credentials.cpf!){
+            pixResult, errorMsg in
+            
+            if let pixResult = pixResult{
+                AuthenticationAPIManager.shared.credentials = pixResult //Atualiza pix
+                self.navigateToConfirmView()
+            }
+            else{
+                guard let errorMsg = errorMsg else {
+                    return
+                }
+                self.showError(error: errorMsg)
+            }
+            
         }
     }
     
     private func navigateToConfirmView(){
-        let storyboard = UIStoryboard(name: "Pix", bundle: nil)
-        let pvc = storyboard.instantiateViewController(withIdentifier: "PixConfirmedViewController") as! PixConfirmedViewController
-        
-        pvc.parentView = self
-        present(pvc, animated: true)
+        DispatchQueue.main.async {
+            let storyboard = UIStoryboard(name: "Pix", bundle: nil)
+            let pvc = storyboard.instantiateViewController(withIdentifier: "PixConfirmedViewController") as! PixConfirmedViewController
+            
+            pvc.parentView = self
+            self.present(pvc, animated: true)
+        }
+    }
+    
+    private func showError(error:String){
+        DispatchQueue.main.async {
+            self.toast(message: error)
+        }
     }
 }

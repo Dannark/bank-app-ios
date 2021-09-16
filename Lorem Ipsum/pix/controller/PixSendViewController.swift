@@ -15,14 +15,38 @@ class PixSendViewController: UIViewController, PopUpDelegate  {
     }
     
     func onConfirmedText(typedText: String, tag: String) {
-        print("onConfirmed successfully \(typedText) on \(tag)")
-        
-        let storyboard = UIStoryboard(name: "Pix", bundle: nil)
-        let pvc = storyboard.instantiateViewController(withIdentifier: "PixPreviewViewController") as! PixPreviewViewController
-        present(pvc, animated: true)
-        
+        fetchPixUserInfo(key: tag, typedText)
     }
     
+    private func fetchPixUserInfo(key:String, _ value: String){
+        PixAPIManager.shared.fetchPixKey(key, value){
+            pixInfo, errorMsg in
+            
+            if let pixInfo = pixInfo{
+                self.navigatePixPreview(pixInfo)
+            }
+            else{
+                guard let errorMsg = errorMsg else {
+                    return
+                }
+                self.showError(error: errorMsg)
+            }
+        }
+    }
+    
+    private func navigatePixPreview(_ pixInfo: AuthenticationModel){
+        DispatchQueue.main.async {
+            let storyboard = UIStoryboard(name: "Pix", bundle: nil)
+            let pvc = storyboard.instantiateViewController(withIdentifier: "PixPreviewViewController") as! PixPreviewViewController
+            self.present(pvc, animated: true)
+        }
+    }
+    
+    private func showError(error:String){
+        DispatchQueue.main.async {
+            self.toast(message: error)
+        }
+    }
     
     @IBAction func goToCPFInput(sender: AnyObject) {
         InputViewController.showInputModal(parentVC: self, payload: InputDetailModel(title: "Digite o CPF/CNPJ", sutitlePlaceholder: "", minLength: 11, maxLength: 15, allowedCharacters: Presets.CPF_CHARS), sameWindows: true, tag: "CPF")

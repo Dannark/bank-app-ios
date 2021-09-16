@@ -34,8 +34,11 @@ class PixQRCodeViewController: UIViewController {
     }
     
     @IBAction func copyCQCode(_ sender: Any) {
+        UIPasteboard.general.string = qrCodeString
+        toast(message: "Copiado para area de transferência")
     }
     @IBAction func shareQRCode(_ sender: Any) {
+        shareImage(image: qrCodeImage.image)
     }
     @IBAction func confirmButton(_ sender: Any) {
         self.parentVC?.navigationController?.popToRootViewController(animated: false)

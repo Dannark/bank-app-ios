@@ -442,12 +442,16 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="agencyName" destination="M7a-jP-V3e" id="ltS-5s-9Mq"/>
                         <outlet property="banco" destination="GSZ-CD-Nfm" id="tqS-W7-OSR"/>
+                        <outlet property="bankName" destination="GSZ-CD-Nfm" id="Lb4-zY-cxW"/>
                         <outlet property="confirmButton" destination="mfo-UB-WFm" id="syL-Pv-y0h"/>
                         <outlet property="conta" destination="M7a-jP-V3e" id="c74-ha-Rdu"/>
                         <outlet property="cpf" destination="cpd-OC-oUT" id="Leq-Oj-lmu"/>
+                        <outlet property="cpfName" destination="cpd-OC-oUT" id="o1z-VQ-vCy"/>
                         <outlet property="nome" destination="J1f-fP-8uY" id="Lkg-n0-bj1"/>
                         <outlet property="pixValue" destination="kdg-pC-z0F" id="XDX-uM-l5F"/>
+                        <outlet property="userName" destination="J1f-fP-8uY" id="hBi-Cv-f8j"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MnD-th-cLO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

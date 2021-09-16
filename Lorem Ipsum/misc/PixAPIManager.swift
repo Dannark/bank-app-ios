@@ -1,15 +1,16 @@
 //
-//  LoginAPIManager.swift
+//  PixAPIManager.swift
 //  Lorem Bank
 //
-//  Created by Daniel Queiroz on 01/09/21.
+//  Created by Daniel Queiroz on 15/09/21.
 //
 
 import Foundation
 
-class AuthenticationAPIManager {
-    static var shared: AuthenticationAPIManager = {
-        let instance = AuthenticationAPIManager()
+
+class PixAPIManager {
+    static var shared: PixAPIManager = {
+        let instance = PixAPIManager()
         return instance
     }()
     
@@ -17,8 +18,8 @@ class AuthenticationAPIManager {
     
     private init(){}
     
-    func authenticate(_ cpf: String, _ pass:String, completion: @escaping (AuthenticationModel?, String?) -> Void){
-        APIManager.post("login", params: ["cpf":cpf, "pass":pass]) { result, response in
+    func fetchPixKey(_ key:String, _ value: String, completion: @escaping (AuthenticationModel?, String?) -> Void){
+        APIManager.post("pixkey", params: [key:value]) { result, response in
             var errorMsg = "Um erro inesperado aconteceu, favor tente novamente"
             
             if let httpResponse = response as? HTTPURLResponse {
@@ -33,8 +34,8 @@ class AuthenticationAPIManager {
                 case let .failure(error):
                     print("Erro ao acessar dados do usuario \(error)")
                 }
-                if httpResponse.statusCode >= 403{
-                    errorMsg = "Credenciais inválida"
+                if httpResponse.statusCode == 404{
+                    errorMsg = "Chave pix não encontrada"
                 }
             }
             
@@ -43,11 +44,12 @@ class AuthenticationAPIManager {
         }
     }
     
-    func payInvocie(_ cpf: String, _ value:String, completion: @escaping (AuthenticationModel?, String?) -> Void){
-        APIManager.post("payInvoice", params: ["cpf":cpf, "value":value]) { result, response in
+    func sendPix(_ sendTo:String, _ value:String, _ from:String, completion: @escaping (AuthenticationModel?, String?) -> Void){
+        APIManager.post("sendpix", params: ["sendTo":sendTo, "value":value, "from":from]) { result, response in
             var errorMsg = "Um erro inesperado aconteceu, favor tente novamente"
             
             if let httpResponse = response as? HTTPURLResponse {
+                print(httpResponse)
                 switch result{
                 case let .success(authentication):
                     let auth = self.convertToAuthenticationModel(fromJSON: authentication)
@@ -57,15 +59,16 @@ class AuthenticationAPIManager {
                         return
                     }
                 case let .failure(error):
-                    print("Erro ao acessar dados do usuario \(error)")
+                    print("Erro ao acessar dados da transação do pix: \(error)")
                 }
-                if httpResponse.statusCode >= 403{
+                if httpResponse.statusCode == 403{
                     errorMsg = "Saldo insuficiente"
                 }
+                else if httpResponse.statusCode == 404{
+                    errorMsg = "Chave PIX não encontrada"
+                }
             }
-            
             completion(nil, errorMsg)
-            
         }
     }
     

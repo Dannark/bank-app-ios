@@ -58,6 +58,30 @@ extension UIViewController{
             alert.dismiss(animated: true)
         }
     }
+    
+    func shareText(text:String){
+        let textToShare = [ text ]
+        let activityViewController = UIActivityViewController(activityItems: textToShare, applicationActivities: nil)
+        activityViewController.popoverPresentationController?.sourceView = self.view // so that iPads won't crash
+        
+        activityViewController.excludedActivityTypes = [ UIActivity.ActivityType.airDrop, UIActivity.ActivityType.postToFacebook ]
+        
+        self.present(activityViewController, animated: true, completion: nil)
+    }
+    
+    func shareImage(image: UIImage?){
+        guard let image = image else{
+            print("Erro ao carregar imagem")
+            return
+        }
+        let imageToShare = [ image ]
+        let activityViewController = UIActivityViewController(activityItems: imageToShare, applicationActivities: nil)
+        activityViewController.popoverPresentationController?.sourceView = self.view // so that iPads won't crash
+        
+        activityViewController.excludedActivityTypes = [ UIActivity.ActivityType.airDrop, UIActivity.ActivityType.postToFacebook ]
+        
+        self.present(activityViewController, animated: true, completion: nil)
+    }
 }
 
 extension UITextField {

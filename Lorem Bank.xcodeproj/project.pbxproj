@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6502D96426EE909B001376AC /* InputDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6502D96326EE909B001376AC /* InputDetailModel.swift */; };
 		65345A8A26ED5688001ABDC3 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65345A8926ED5688001ABDC3 /* HomeTableViewController.swift */; };
+		6537464626F2FF4F00114D94 /* PixAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6537464526F2FF4F00114D94 /* PixAPIManager.swift */; };
 		655FBF7B26ED6716006AA5DC /* Pix.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 655FBF7A26ED6716006AA5DC /* Pix.storyboard */; };
 		65920C7C26EFF7FE0027D6DF /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65920C7B26EFF7FE0027D6DF /* String+Extensions.swift */; };
 		65920C7E26F0032E0027D6DF /* PasswordCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65920C7D26F0032E0027D6DF /* PasswordCheckViewController.swift */; };
@@ -19,7 +20,6 @@
 		65920C8B26F03EE20027D6DF /* PixLimitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65920C8A26F03EE20027D6DF /* PixLimitViewController.swift */; };
 		65920C9126F049AF0027D6DF /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65920C9026F049AF0027D6DF /* Login.storyboard */; };
 		65989F3726F0C8FB00FB93E6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65989F3626F0C8FB00FB93E6 /* LoginViewController.swift */; };
-		65989F3A26F0CD1E00FB93E6 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65989F3926F0CD1E00FB93E6 /* CoreDataManager.swift */; };
 		65989F3E26F0CECB00FB93E6 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65989F3D26F0CECB00FB93E6 /* APIManager.swift */; };
 		65989F4026F0D9B700FB93E6 /* AuthenticationAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65989F3F26F0D9B700FB93E6 /* AuthenticationAPIManager.swift */; };
 		65989F4326F0E18C00FB93E6 /* AuthenticationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65989F4226F0E18C00FB93E6 /* AuthenticationModel.swift */; };
@@ -43,7 +43,7 @@
 		65BBF0CD26E6E21A00C9F598 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65BBF0CB26E6E21A00C9F598 /* LaunchScreen.storyboard */; };
 		65BBF0D826E6E21B00C9F598 /* Lorem_IpsumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BBF0D726E6E21B00C9F598 /* Lorem_IpsumTests.swift */; };
 		65BBF0E326E6E21B00C9F598 /* Lorem_IpsumUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BBF0E226E6E21B00C9F598 /* Lorem_IpsumUITests.swift */; };
-		65BBF0F126E7097A00C9F598 /* HelperExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BBF0F026E7097A00C9F598 /* HelperExtensions.swift */; };
+		65BBF0F126E7097A00C9F598 /* UI+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BBF0F026E7097A00C9F598 /* UI+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +66,7 @@
 /* Begin PBXFileReference section */
 		6502D96326EE909B001376AC /* InputDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputDetailModel.swift; sourceTree = "<group>"; };
 		65345A8926ED5688001ABDC3 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
+		6537464526F2FF4F00114D94 /* PixAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixAPIManager.swift; sourceTree = "<group>"; };
 		655FBF7A26ED6716006AA5DC /* Pix.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Pix.storyboard; sourceTree = "<group>"; };
 		65920C7B26EFF7FE0027D6DF /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		65920C7D26F0032E0027D6DF /* PasswordCheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordCheckViewController.swift; sourceTree = "<group>"; };
@@ -76,7 +77,6 @@
 		65920C8A26F03EE20027D6DF /* PixLimitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixLimitViewController.swift; sourceTree = "<group>"; };
 		65920C9026F049AF0027D6DF /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		65989F3626F0C8FB00FB93E6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		65989F3926F0CD1E00FB93E6 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		65989F3D26F0CECB00FB93E6 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		65989F3F26F0D9B700FB93E6 /* AuthenticationAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationAPIManager.swift; sourceTree = "<group>"; };
 		65989F4226F0E18C00FB93E6 /* AuthenticationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationModel.swift; sourceTree = "<group>"; };
@@ -106,7 +106,7 @@
 		65BBF0DE26E6E21B00C9F598 /* Lorem BankUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Lorem BankUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		65BBF0E226E6E21B00C9F598 /* Lorem_IpsumUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lorem_IpsumUITests.swift; sourceTree = "<group>"; };
 		65BBF0E426E6E21B00C9F598 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		65BBF0F026E7097A00C9F598 /* HelperExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperExtensions.swift; sourceTree = "<group>"; };
+		65BBF0F026E7097A00C9F598 /* UI+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UI+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,11 +145,19 @@
 		6502D96526EEAE20001376AC /* util */ = {
 			isa = PBXGroup;
 			children = (
-				65BBF0F026E7097A00C9F598 /* HelperExtensions.swift */,
+				65BBF0F026E7097A00C9F598 /* UI+Extensions.swift */,
 				65B1814626EFCCF800197AFC /* Utils.swift */,
 				65920C7B26EFF7FE0027D6DF /* String+Extensions.swift */,
 			);
 			path = util;
+			sourceTree = "<group>";
+		};
+		6537464426F2FBAF00114D94 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				65BBF0C626E6E21900C9F598 /* Main.storyboard */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 		655FBF7826ED65A1006AA5DC /* pix */ = {
@@ -176,9 +184,9 @@
 			isa = PBXGroup;
 			children = (
 				65989F3C26F0CE4E00FB93E6 /* commons */,
-				65989F3B26F0CDC800FB93E6 /* core data */,
 				65989F3D26F0CECB00FB93E6 /* APIManager.swift */,
 				65989F3F26F0D9B700FB93E6 /* AuthenticationAPIManager.swift */,
+				6537464526F2FF4F00114D94 /* PixAPIManager.swift */,
 			);
 			path = misc;
 			sourceTree = "<group>";
@@ -227,14 +235,6 @@
 			path = controller;
 			sourceTree = "<group>";
 		};
-		65989F3B26F0CDC800FB93E6 /* core data */ = {
-			isa = PBXGroup;
-			children = (
-				65989F3926F0CD1E00FB93E6 /* CoreDataManager.swift */,
-			);
-			path = "core data";
-			sourceTree = "<group>";
-		};
 		65989F3C26F0CE4E00FB93E6 /* commons */ = {
 			isa = PBXGroup;
 			children = (
@@ -270,6 +270,7 @@
 		65B530A426E7E5D2002B73A4 /* home */ = {
 			isa = PBXGroup;
 			children = (
+				6537464426F2FBAF00114D94 /* view */,
 				65B530A626E7E882002B73A4 /* controllers */,
 				65B530A526E7E875002B73A4 /* models */,
 			);
@@ -325,7 +326,6 @@
 				65BBF0C026E6E21900C9F598 /* AppDelegate.swift */,
 				65BBF0C226E6E21900C9F598 /* SceneDelegate.swift */,
 				65BBF0C426E6E21900C9F598 /* ViewController.swift */,
-				65BBF0C626E6E21900C9F598 /* Main.storyboard */,
 				65BBF0C926E6E21A00C9F598 /* Assets.xcassets */,
 				65BBF0CB26E6E21A00C9F598 /* LaunchScreen.storyboard */,
 				65BBF0CE26E6E21A00C9F598 /* Info.plist */,
@@ -491,7 +491,6 @@
 				6502D96426EE909B001376AC /* InputDetailModel.swift in Sources */,
 				65345A8A26ED5688001ABDC3 /* HomeTableViewController.swift in Sources */,
 				65989F4326F0E18C00FB93E6 /* AuthenticationModel.swift in Sources */,
-				65989F3A26F0CD1E00FB93E6 /* CoreDataManager.swift in Sources */,
 				65920C7E26F0032E0027D6DF /* PasswordCheckViewController.swift in Sources */,
 				65B530A826E7E905002B73A4 /* CreditcardViewController.swift in Sources */,
 				65920C8726F0282F0027D6DF /* PixConfirmedViewController.swift in Sources */,
@@ -506,8 +505,9 @@
 				65920C8B26F03EE20027D6DF /* PixLimitViewController.swift in Sources */,
 				65989F3E26F0CECB00FB93E6 /* APIManager.swift in Sources */,
 				65B1814726EFCCF800197AFC /* Utils.swift in Sources */,
+				6537464626F2FF4F00114D94 /* PixAPIManager.swift in Sources */,
 				65920C7C26EFF7FE0027D6DF /* String+Extensions.swift in Sources */,
-				65BBF0F126E7097A00C9F598 /* HelperExtensions.swift in Sources */,
+				65BBF0F126E7097A00C9F598 /* UI+Extensions.swift in Sources */,
 				65BBF0C126E6E21900C9F598 /* AppDelegate.swift in Sources */,
 				659A9DEB26EE686D00E102ED /* InputViewController.swift in Sources */,
 				65989F4026F0D9B700FB93E6 /* AuthenticationAPIManager.swift in Sources */,

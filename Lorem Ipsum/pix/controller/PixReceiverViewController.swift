@@ -86,6 +86,6 @@ class PixReceiverViewController: UIViewController, PopUpDelegate {
     }
     
     private func generatePixCode() -> String{
-        return "00020101021126540014br.gov.bcb.pix0111\(keyLabel.text)0217\(descriptionLabel.text!)5204000053039865406\(valueInserted.text!)5802BR5924\(AuthenticationAPIManager.shared.credentials.name!)6009SAO PAULO622905251FFKBEBPHMKGJBTMCA82KZCKP63046CD8"
+        return "00020101021126540014br.gov.bcb.pix0111\(keyLabel.text ?? "")0217\(descriptionLabel.text ?? "")5204000053039865406\(valueInserted.text ?? "")5802BR5924\(AuthenticationAPIManager.shared.credentials.name ?? "")6009SAO PAULO622905251FFKBEBPHMKGJBTMCA82KZCKP63046CD8"
     }
 }

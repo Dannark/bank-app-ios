@@ -18,15 +18,13 @@ class LoginViewController: UIViewController, PopUpDelegate {
     }
     
     @IBAction func createAccount(_ sender: Any) {
-        toast(message: "Para afins de demonstração, essa funcionalidade está desativada. Utilize o CPF de teste 008.984.872-18 para login.")
+        toast(message: "Para afins de demonstração, essa funcionalidade está desativada. Utilize o CPF de teste 008.984.872-18 ou 000.111.222.33 para login, e senha 12345678 para ambos")
     }
     @IBAction func openLoginDialog(_ sender: Any) {
         InputViewController.showInputModal(parentVC: self, payload: InputDetailModel(title: "Digite o CPF", sutitlePlaceholder: "000.000.000-00", minLength: 11, maxLength: 11, allowedCharacters: Presets.NUMERIC_CHARS), sameWindows: false, tag: "CPF")
     }
     
     func onConfirmedText(typedText: String, tag: String) {
-        print("typedText")
-        print(typedText)
         switch tag {
         case "CPF":
             holdCPF = typedText
@@ -45,18 +43,22 @@ class LoginViewController: UIViewController, PopUpDelegate {
     }
     
     private func authenticate(_ cpf: String, _ pass:String){
-        print("login..")
+        print("fazendo login..")
         AuthenticationAPIManager.shared.authenticate(cpf, pass){
-            auth in
+            credentials, errorMsg in
             
-            switch auth{
-            case let .success(credentials):
+            if let credentials = credentials{
                 self.navigateToHome(credentials)
-                
-            case let .failure(error):
-                print("Erro ao autenticar usuario \(error)")
-                self.toast(message: "Estamos com alguma instabilidade no sistema. Favor tente novamente")
             }
+            else{
+                if let errorMsg = errorMsg{
+                    self.showError(error: errorMsg)
+                }
+                else{
+                    print("Um evento de proporções catastroficas e inimaginaveis aconteceu... \(credentials) | \(errorMsg)")
+                }
+            }
+            
         }
     }
     
@@ -66,6 +68,12 @@ class LoginViewController: UIViewController, PopUpDelegate {
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "Home")
             
             self.show(nextViewController, sender: self)
+        }
+    }
+    
+    private func showError(error:String){
+        DispatchQueue.main.async {
+            self.toast(message: error)
         }
     }
 }
