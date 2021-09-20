@@ -11,7 +11,16 @@ struct AuthenticationModel: Codable{
     var name:String?
     var cpf:String?
     var prekey:String?
+    var limitPix:String?
     var account: AccountModel?
     var creditcard: CardItem?
-    var invoice: InvoiceItem?
+    var invoices: [InvoiceItem]?
+}
+
+extension AuthenticationModel {
+    func getLastPendingInvoice() -> InvoiceItem?{
+        return invoices?.filter{ invoice in
+            invoice.paid == "0"
+        }.first
+    }
 }

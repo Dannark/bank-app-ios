@@ -7,7 +7,15 @@
 
 import Foundation
 
-class InvoiceItem: Codable{
+struct InvoiceItem: Codable{
+    var id:String
     var value:String
     var dueDate:String
+    var paid:String
+}
+
+extension InvoiceItem {
+    func valueToBePaid() -> String {
+        return String((Int(value) ?? 0) - (Int(paid) ?? 0))
+    }
 }

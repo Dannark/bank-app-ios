@@ -369,29 +369,39 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dT0-GJ-9W8">
-                                                    <rect key="frame" x="20" y="94" width="374" height="30"/>
+                                                    <rect key="frame" x="20" y="94" width="183" height="30"/>
                                                     <state key="normal" title="Pagar fatura"/>
                                                     <connections>
                                                         <action selector="payInvoice:" destination="Bju-jD-HF2" eventType="touchUpInside" id="xVU-8g-aaT"/>
                                                     </connections>
                                                 </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gXE-sW-lQ6">
+                                                    <rect key="frame" x="211" y="94" width="183" height="30"/>
+                                                    <state key="normal" title="Ver Faturas"/>
+                                                    <connections>
+                                                        <action selector="seeInvoice:" destination="Bju-jD-HF2" eventType="touchUpInside" id="Axw-4r-LI4"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="rOs-NH-pQw" firstAttribute="firstBaseline" secondItem="YNo-30-wxj" secondAttribute="firstBaseline" id="9HT-Q4-kOk"/>
-                                                <constraint firstItem="dT0-GJ-9W8" firstAttribute="leading" secondItem="tMw-BL-8Nr" secondAttribute="leadingMargin" id="9hp-vG-7hv"/>
                                                 <constraint firstItem="ytw-Jg-9rO" firstAttribute="leading" secondItem="WzV-V7-vbf" secondAttribute="trailing" constant="5" id="Dhw-PB-L2l"/>
                                                 <constraint firstItem="YNo-30-wxj" firstAttribute="top" secondItem="tMw-BL-8Nr" secondAttribute="top" constant="10" id="G82-JO-qW9"/>
                                                 <constraint firstItem="8M7-vu-SB6" firstAttribute="top" secondItem="tMw-BL-8Nr" secondAttribute="topMargin" id="GTE-hB-hKL"/>
                                                 <constraint firstItem="WzV-V7-vbf" firstAttribute="firstBaseline" secondItem="ytw-Jg-9rO" secondAttribute="firstBaseline" id="H0e-DI-Ax3"/>
+                                                <constraint firstItem="gXE-sW-lQ6" firstAttribute="leading" secondItem="dT0-GJ-9W8" secondAttribute="trailing" constant="8" id="HBB-oa-Oke"/>
                                                 <constraint firstAttribute="trailing" secondItem="YNo-30-wxj" secondAttribute="trailing" constant="20" symbolic="YES" id="IPb-s5-MLe"/>
                                                 <constraint firstItem="8M7-vu-SB6" firstAttribute="leading" secondItem="tMw-BL-8Nr" secondAttribute="leadingMargin" id="JJL-4s-G2V"/>
+                                                <constraint firstItem="gXE-sW-lQ6" firstAttribute="bottom" secondItem="tMw-BL-8Nr" secondAttribute="bottomMargin" id="Pyj-gR-Yim"/>
                                                 <constraint firstItem="YNo-30-wxj" firstAttribute="leading" secondItem="rOs-NH-pQw" secondAttribute="trailing" constant="8" id="RQV-cE-TID"/>
                                                 <constraint firstItem="WzV-V7-vbf" firstAttribute="leading" secondItem="tMw-BL-8Nr" secondAttribute="leadingMargin" id="SWG-K7-z2C"/>
+                                                <constraint firstItem="dT0-GJ-9W8" firstAttribute="bottom" secondItem="tMw-BL-8Nr" secondAttribute="bottomMargin" id="Zmm-E0-o7B"/>
+                                                <constraint firstItem="gXE-sW-lQ6" firstAttribute="width" secondItem="dT0-GJ-9W8" secondAttribute="width" id="d0C-xt-lQP"/>
                                                 <constraint firstItem="CAH-R0-Yzl" firstAttribute="top" secondItem="YNo-30-wxj" secondAttribute="bottom" constant="19" id="gRH-D8-Xj5"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="dT0-GJ-9W8" secondAttribute="trailing" id="imW-gh-aSl"/>
                                                 <constraint firstItem="ytw-Jg-9rO" firstAttribute="top" secondItem="8M7-vu-SB6" secondAttribute="bottom" constant="16" id="kHP-kK-l3Y"/>
-                                                <constraint firstItem="dT0-GJ-9W8" firstAttribute="bottom" secondItem="tMw-BL-8Nr" secondAttribute="bottomMargin" id="lut-T5-HR9"/>
                                                 <constraint firstItem="CAH-R0-Yzl" firstAttribute="trailing" secondItem="tMw-BL-8Nr" secondAttribute="trailingMargin" id="qXZ-LJ-dqI"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="gXE-sW-lQ6" secondAttribute="trailing" id="qpV-CQ-sJs"/>
+                                                <constraint firstItem="dT0-GJ-9W8" firstAttribute="leading" secondItem="tMw-BL-8Nr" secondAttribute="leadingMargin" id="r1k-hi-dJp"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -456,6 +466,7 @@
                         <outlet property="current" destination="Bbj-Wf-5og" id="YP2-dB-Cau"/>
                         <outlet property="invoice" destination="ytw-Jg-9rO" id="GFb-8P-dp5"/>
                         <outlet property="invoiceDueDate" destination="YNo-30-wxj" id="pl6-4A-Cyg"/>
+                        <outlet property="payButton" destination="dT0-GJ-9W8" id="KJN-Ao-Ep9"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KAl-yX-xCt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

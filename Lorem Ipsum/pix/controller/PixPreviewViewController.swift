@@ -25,6 +25,7 @@ class PixPreviewViewController: UIViewController, PopUpDelegate, PasswordDelegat
     override func viewDidLoad() {
         super.viewDidLoad()
         fillDialog()
+        validateConfirmButton(isActive: false)
     }
     
     private func fillDialog(){
@@ -35,12 +36,32 @@ class PixPreviewViewController: UIViewController, PopUpDelegate, PasswordDelegat
     }
     
     private func openInputValueDialog(){
-        InputViewController.showInputModal(parentVC: self, payload: InputDetailModel(title: "Quanto deseja enviar?", sutitlePlaceholder: "R$ 0.00", minLength: 1, maxLength: 10, allowedCharacters: Presets.NUMERIC_CHARS), sameWindows: true, tag: "PIXVALUE")
+        validateConfirmButton(isActive: false)
+        InputViewController.showInputModal(parentVC: self, payload: InputDetailModel(title: "Quanto deseja enviar?", sutitlePlaceholder: "R$ 0.00", minLength: 1, maxLength: 10, allowedCharacters: Presets.FLOAT_CHARS), sameWindows: true, tag: "PIXVALUE")
     }
     
     func onConfirmedText(typedText: String, tag: String) {
         pixValue.text = typedText.toPrice()
-        validateConfirmButton(isActive: (pixValue.text != "0.00"))
+        
+        if let currentPixValue = Float(typedText),
+           let pixLimit = Float(AuthenticationAPIManager.shared.credentials.limitPix ?? "0.0"),
+           let balance = Float(AuthenticationAPIManager.shared.credentials.account?.balance ?? "0.0"){
+            
+            var validate = true
+            if currentPixValue > balance{
+                self.toast(message: "Você não tem saldo em conta suficiente para enviar esse valor")
+                validate = false
+            }
+            else if currentPixValue > pixLimit{
+                self.toast(message: "Esse valor ultrapassa o limite de pix diario")
+                validate = false
+            }
+            else if currentPixValue <= 0.0{
+                validate = false
+            }
+            validateConfirmButton(isActive: validate)
+        }
+        
     }
     @IBAction func editar(_ sender: Any) {
         openInputValueDialog()

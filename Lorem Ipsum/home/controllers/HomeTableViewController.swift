@@ -14,8 +14,11 @@ class HomeTableViewController: UITableViewController, PasswordDelegate {
     
     @IBOutlet var invoice: UILabel!
     @IBOutlet var invoiceDueDate: UILabel!
+    @IBOutlet var payButton: UIButton!
     
     var hideInfo = true
+    
+    private var pendingInvoice: InvoiceItem?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,8 +31,13 @@ class HomeTableViewController: UITableViewController, PasswordDelegate {
     }
     
     private func showHideFields(){
+        print("showHideFields")
+        updateInvoiceLabel()
         accumulated.text = AuthenticationAPIManager.shared.credentials.account?.monthAccumulated?.toPrice()
-        invoiceDueDate.text = AuthenticationAPIManager.shared.credentials.invoice?.dueDate
+        
+        if let dueDate = pendingInvoice?.dueDate{
+            invoiceDueDate.text = dueDate
+        }
         
         if hideInfo{
             current.text = "******"
@@ -37,8 +45,12 @@ class HomeTableViewController: UITableViewController, PasswordDelegate {
         }
         else{
             current.text = AuthenticationAPIManager.shared.credentials.account?.balance?.toPrice()
-            invoice.text = AuthenticationAPIManager.shared.credentials.invoice?.value.toPrice()
+            
+            if let pendingInvoice = pendingInvoice{
+                invoice.text = pendingInvoice.valueToBePaid().toPrice()
+            }
         }
+        disableButton()
     }
     
     @IBAction func onEyeCurrentTouch(_ sender: Any) {
@@ -61,6 +73,7 @@ class HomeTableViewController: UITableViewController, PasswordDelegate {
         PasswordCheckViewController.showModal(parentVC: self, sameWindows: true, tag: "CHECKPASSWORD")
     }
     @IBAction func seeInvoice(_ sender: Any) {
+        navigateToInvoiceListWindows()
     }
     @IBAction func referralToAFriend(_ sender: Any) {
         let textToShare = "Hey there! I'm using Lorem Bank and it's Awesome!\n\nDownload Lorem Bank to get pre approvated cretid limit of $1000 right now!\nVisit www.lorenbank.com.br/app"
@@ -90,7 +103,13 @@ class HomeTableViewController: UITableViewController, PasswordDelegate {
     }
     
     private func sendOrderToPayInvoice(){
-        AuthenticationAPIManager.shared.payInvocie(AuthenticationAPIManager.shared.credentials.cpf!, AuthenticationAPIManager.shared.credentials.invoice!.value){
+        guard let invoice = pendingInvoice,
+              let cpfTo = AuthenticationAPIManager.shared.credentials.cpf else{
+            updateInvoiceLabel()
+            return
+        }
+        
+        InvoiceAPIManager.shared.payInvocie(cpfTo, invoice){
             user, errorMsg in
             
             if let user = user{
@@ -107,6 +126,26 @@ class HomeTableViewController: UITableViewController, PasswordDelegate {
         }
     }
     
+    private func updateInvoiceLabel(){
+        pendingInvoice = AuthenticationAPIManager.shared.credentials.getLastPendingInvoice()
+        
+        if pendingInvoice == nil{
+            invoice.text = "0.00"
+            
+            let nextMonth = Calendar.current.date(byAdding: .month, value: 1, to: Date())?.get(.day, .month, .year)
+            if let month = nextMonth?.month {
+                if let paymentDay = AuthenticationAPIManager.shared.credentials.creditcard?.paymentDay{
+                    invoiceDueDate.text = "\(paymentDay)"+"\\"+"\(month)"
+                }
+            }
+            
+        }
+    }
+    
+    private func disableButton(){
+        payButton.isEnabled = pendingInvoice != nil
+    }
+    
     private func onInvoicePaymentSuccessed(){
         DispatchQueue.main.async {
             self.showHideFields()
@@ -117,5 +156,14 @@ class HomeTableViewController: UITableViewController, PasswordDelegate {
         DispatchQueue.main.async {
             self.toast(message: msg)
         }
+    }
+    
+    private func navigateToInvoiceListWindows(){
+        let storyboard = UIStoryboard(name: "Invoice", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "InvoiceTableViewController") as! InvoiceTableViewController
+        
+        vc.parentView = self
+//        navigationController?.show(vc, sender: self)
+        navigationController?.present(vc, animated: true, completion: nil)
     }
 }

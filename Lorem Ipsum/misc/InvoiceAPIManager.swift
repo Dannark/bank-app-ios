@@ -1,22 +1,22 @@
 //
-//  LoginAPIManager.swift
+//  InvoiceAPIManager.swift
 //  Lorem Bank
 //
-//  Created by Daniel Queiroz on 01/09/21.
+//  Created by Daniel Queiroz on 19/09/21.
 //
 
 import Foundation
 
-class AuthenticationAPIManager: BaseAPICall {
-    static var shared: AuthenticationAPIManager = {
-        let instance = AuthenticationAPIManager()
+class InvoiceAPIManager: BaseAPICall {
+    static var shared: InvoiceAPIManager = {
+        let instance = InvoiceAPIManager()
         return instance
     }()
     
     private override init(){}
-    
-    func authenticate(_ cpf: String, _ pass:String, completion: @escaping (AuthenticationModel?, String?) -> Void){
-        APIManager.post("login", params: ["cpf":cpf, "pass":pass]) { result, response in
+
+    func payInvocie(_ cpf: String, _ invoice: InvoiceItem, completion: @escaping (AuthenticationModel?, String?) -> Void){
+        APIManager.post("payInvoice", params: ["cpf":cpf, "value":invoice.value, "dueDate":invoice.dueDate]) { result, response in
             var errorMsg = "Um erro inesperado aconteceu, favor tente novamente"
             
             if let httpResponse = response as? HTTPURLResponse {
@@ -32,7 +32,7 @@ class AuthenticationAPIManager: BaseAPICall {
                     print("Erro ao acessar dados do usuario \(error)")
                 }
                 if httpResponse.statusCode >= 403{
-                    errorMsg = "Credenciais inválida"
+                    errorMsg = "Saldo insuficiente"
                 }
             }
             

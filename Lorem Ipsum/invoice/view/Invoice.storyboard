@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8qC-jL-Of1">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18122"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Faturas-->
+        <scene sceneID="1hJ-sh-lfb">
+            <objects>
+                <tableViewController storyboardIdentifier="InvoiceTableViewController" title="Faturas" id="8qC-jL-Of1" customClass="InvoiceTableViewController" customModule="Lorem_Bank" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="NeI-7Z-wEf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="txo-I2-bKW">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v7g-B9-U1o">
+                                    <rect key="frame" x="16" y="0.0" width="17.5" height="60"/>
+                                    <state key="normal" image="xmark" catalog="system">
+                                        <color key="titleColor" systemColor="systemBlueColor"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="backButton:" destination="8qC-jL-Of1" eventType="touchUpInside" id="sYy-nv-93g"/>
+                                    </connections>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resumo das Faturas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bpm-DP-dwq">
+                                    <rect key="frame" x="121.5" y="18.5" width="171.5" height="23"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="v7g-B9-U1o" secondAttribute="bottom" id="NaK-fu-caT"/>
+                                <constraint firstItem="Bpm-DP-dwq" firstAttribute="centerX" secondItem="txo-I2-bKW" secondAttribute="centerX" id="Vs0-ER-Dzq"/>
+                                <constraint firstItem="v7g-B9-U1o" firstAttribute="leading" secondItem="txo-I2-bKW" secondAttribute="leading" constant="16" id="WQx-ZF-PN9"/>
+                                <constraint firstItem="Bpm-DP-dwq" firstAttribute="centerY" secondItem="txo-I2-bKW" secondAttribute="centerY" id="q0X-8s-3u7"/>
+                                <constraint firstItem="v7g-B9-U1o" firstAttribute="top" secondItem="txo-I2-bKW" secondAttribute="top" id="vtp-di-oWO"/>
+                            </constraints>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="InvoiceItemCell" rowHeight="70" id="DoG-uB-e97" customClass="InvoiceItemCell" customModule="Lorem_Bank" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="84.5" width="414" height="70"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DoG-uB-e97" id="0mU-s3-TtJ">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OUT." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="te6-aN-JZT">
+                                            <rect key="frame" x="20" y="24.5" width="39" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 657,00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rko-Ov-jJO">
+                                            <rect key="frame" x="316" y="24.5" width="78" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="te6-aN-JZT" firstAttribute="leading" secondItem="0mU-s3-TtJ" secondAttribute="leadingMargin" id="CMm-6i-WGg"/>
+                                        <constraint firstItem="rko-Ov-jJO" firstAttribute="centerY" secondItem="0mU-s3-TtJ" secondAttribute="centerY" id="TvM-Kl-Cog"/>
+                                        <constraint firstItem="te6-aN-JZT" firstAttribute="centerY" secondItem="0mU-s3-TtJ" secondAttribute="centerY" id="mGT-b1-fkm"/>
+                                        <constraint firstItem="rko-Ov-jJO" firstAttribute="trailing" secondItem="0mU-s3-TtJ" secondAttribute="trailingMargin" id="ulv-Gp-9pN"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="month" destination="te6-aN-JZT" id="WUz-Zp-vYY"/>
+                                    <outlet property="total_value" destination="rko-Ov-jJO" id="rm6-Gp-LSu"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="8qC-jL-Of1" id="fDY-XW-zk0"/>
+                            <outlet property="delegate" destination="8qC-jL-Of1" id="d7I-YG-H7x"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1gb-kh-xcn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="360.86956521739131" y="8.7053571428571423"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

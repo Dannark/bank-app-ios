@@ -12,11 +12,5 @@ class CardItem: Codable{
     var validDate: String
     var cardNumber: String
     var balanceLimit: String
-    
-    init(clientName:String, validDate:String, cardNumber:String, balance:String){
-        self.clientName = clientName
-        self.validDate = validDate
-        self.cardNumber = cardNumber
-        self.balanceLimit = balance
-    }
+    var paymentDay: String
 }

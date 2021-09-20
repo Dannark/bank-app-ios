@@ -11,6 +11,7 @@ import UIKit
 class Presets{
     static var CPF_CHARS = "0123456789.-/"
     static var NUMERIC_CHARS = "0123456789"
+    static var FLOAT_CHARS = "0123456789."
     static var EMAIL_CHARS = "qwertyuiopasdfghjklçzxcvbnm_.0123456789@"
     static var ANY = "ANY"
 }
